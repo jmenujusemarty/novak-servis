@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" role="img" aria-labelledby="title desc">
+  <title id="title">Autoservis Janov</title>
+  <desc id="desc">Vektorové logo Autoservis Janov ve stylu tmavého loga z návrhu 02.</desc>
+  <rect width="520" height="160" rx="18" fill="#050708"/>
+  <path d="M78 69 C137 26 232 12 330 51" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M64 78 C187 74 310 76 451 49" fill="none" stroke="#20a038" stroke-width="8" stroke-linecap="round"/>
+  <path d="M110 62 C165 46 216 42 280 49" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.92"/>
+  <text x="58" y="119" fill="#ffffff" font-family="Arial Black, Arial, Inter, system-ui, sans-serif" font-size="40" font-style="italic" font-weight="900" letter-spacing="-1.5">AUTOSERVIS</text>
+  <text x="350" y="119" fill="#20a038" font-family="Arial Black, Arial, Inter, system-ui, sans-serif" font-size="40" font-style="italic" font-weight="900" letter-spacing="-1.5">JANOV</text>
+</svg>

@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "title": "Logo exploration for Autoservis Janov",
+    "stage": "Logo exploration",
+    "brand_name": "Autoservis Janov",
+    "anchor": "Local automotive service and repair workshop",
+    "summary": "Compare restrained automotive logo directions built around a subtle car silhouette, workshop trust, and readable service signage."
+  },
+  "constraints": {
+    "preserve": [
+      "brand name spelling: Autoservis Janov",
+      "automotive repair category",
+      "car motif as a first-read identity cue",
+      "works on website header, signage, invoices, and social avatar"
+    ],
+    "avoid": [
+      "fake certification seals",
+      "partner marks",
+      "racing-only tone",
+      "overly detailed car illustration",
+      "unapproved taglines"
+    ]
+  },
+  "routes": [
+    {
+      "id": "quiet-workshop-wordmark",
+      "label": "Quiet Workshop Wordmark",
+      "family": "wordmark",
+      "usage_contexts": [
+        "website header",
+        "garage signage",
+        "invoice header"
+      ],
+      "prompt": "Create a restrained logo exploration tile for Autoservis Janov on a white inspection background. Use a subtle modern car silhouette as a construction line beside a strong readable wordmark. Use deep workshop green, charcoal black, neutral grey, and generous white space. No red accent, no taglines, no fake seals, no partner marks, no racing styling.",
+      "rationale": "A quiet car line gives the automotive cue without making the identity feel like clip art.",
+      "best_for": "Website header, garage sign, and printed documents.",
+      "decision_advice": "Use if the brand should feel direct, trustworthy, and modern without looking like a motorsport brand or generic repair icon.",
+      "watch_out": "The car line must stay bold enough at favicon or mobile header size.",
+      "next_step": "Vectorize the silhouette and tune wordmark spacing for small-size use.",
+      "final_owner": "external-production-identity",
+      "next_prompt_hints": []
+    },
+    {
+      "id": "service-shield",
+      "label": "Service Shield",
+      "family": "heritage",
+      "usage_contexts": [
+        "uniform patch",
+        "social avatar",
+        "local signage"
+      ],
+      "prompt": "Create a logo exploration tile for Autoservis Janov using a compact shield or badge with a simplified car front and workshop-service feel. Keep the typography bold and readable, use deep green and charcoal with restrained red accent. White inspection background. No taglines, no fake certification seal, no partner logos.",
+      "rationale": "A badge can make the workshop feel established and locally reliable.",
+      "best_for": "Uniforms, stickers, social avatar, and small branded surfaces.",
+      "decision_advice": "Use if the business wants a more emblem-like local service identity.",
+      "watch_out": "Badge detail can become heavy in the website header.",
+      "next_step": "Simplify the badge into a one-color icon before production.",
+      "final_owner": "external-production-identity",
+      "next_prompt_hints": []
+    },
+    {
+      "id": "road-and-wrench",
+      "label": "Road And Wrench",
+      "family": "utility",
+      "usage_contexts": [
+        "favicon",
+        "mobile header",
+        "service labels"
+      ],
+      "prompt": "Create a minimal logo exploration tile for Autoservis Janov where a car roof line and road stroke subtly combine with a workshop tool cue such as a wrench gesture. Strong readable wordmark, deep green, charcoal, white background, tiny red accent only if needed. No tagline, no fake seals.",
+      "rationale": "Combines car and repair without drawing a literal complex vehicle.",
+      "best_for": "Small digital sizes and utilitarian workshop materials.",
+      "decision_advice": "Use if the mark needs to stay recognizable in compact places.",
+      "watch_out": "The tool cue should not overpower the car motif.",
+      "next_step": "Test the mark at 32px and 64px before finalizing.",
+      "final_owner": "external-production-identity",
+      "next_prompt_hints": []
+    },
+    {
+      "id": "janov-motion-wordmark",
+      "label": "Janov Motion Wordmark",
+      "family": "wordmark",
+      "usage_contexts": [
+        "website masthead",
+        "vehicle decal",
+        "business card"
+      ],
+      "prompt": "Create a logo exploration tile for Autoservis Janov with the car motif integrated as a motion line through or above the wordmark. Use modern service typography, deep green and charcoal, white inspection background, confident but not racing-focused. No tagline, no partner marks.",
+      "rationale": "Keeps the identity mostly typographic while adding an automotive gesture.",
+      "best_for": "Website masthead, vehicle decal, and business card.",
+      "decision_advice": "Use if the name should carry the identity more than a standalone icon.",
+      "watch_out": "Motion styling can feel generic if the line is too decorative.",
+      "next_step": "Refine the wordmark in vector and build a compact icon from the line.",
+      "final_owner": "external-production-identity",
+      "next_prompt_hints": []
+    }
+  ],
+  "handoff": {
+    "default_owner": "external-production-identity",
+    "next_prompt_hints": []
+  }
+}

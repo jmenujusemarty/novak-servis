@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 220" role="img" aria-labelledby="title desc">
+  <title id="title">Autoservis Janov dark logo</title>
+  <desc id="desc">Tmavá varianta střídmého loga Autoservis Janov se siluetou vozu.</desc>
+  <defs>
+    <linearGradient id="greenStrokeDark" x1="60" y1="124" x2="305" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#32b575"/>
+      <stop offset="1" stop-color="#7bd05d"/>
+    </linearGradient>
+  </defs>
+  <rect width="840" height="220" rx="0" fill="#11161c"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 122c43-5 86-7 129-5 39 2 78 8 116 17" stroke="url(#greenStrokeDark)" stroke-width="11"/>
+    <path d="M78 105c28-32 61-49 99-51h49c27 1 52 17 76 48" stroke="#ffffff" stroke-width="10"/>
+    <path d="M143 76h58c24 0 45 8 64 25" stroke="#ffffff" stroke-width="5.5" opacity=".64"/>
+  </g>
+  <circle cx="110" cy="133" r="8.5" fill="#ffffff"/>
+  <circle cx="255" cy="133" r="8.5" fill="#ffffff"/>
+  <path d="M348 44v132" stroke="#2a3430" stroke-width="2"/>
+  <text x="388" y="86" fill="#a8b4af" font-family="Inter, Arial, Helvetica, sans-serif" font-size="25" font-weight="750" letter-spacing="4">AUTOSERVIS</text>
+  <text x="386" y="151" fill="#ffffff" font-family="Inter, Arial, Helvetica, sans-serif" font-size="70" font-weight="850" letter-spacing="0">JANOV</text>
+  <path d="M391 172h270" stroke="#70c957" stroke-width="7" stroke-linecap="round"/>
+</svg>

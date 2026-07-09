@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autoservis Janov - logo preview</title>
+    <style>
+      :root {
+        --bg: #f5f7f6;
+        --paper: #ffffff;
+        --ink: #11161c;
+        --muted: #64707a;
+        --line: #dfe7e3;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        display: grid;
+        gap: 28px;
+        width: min(100%, 1200px);
+        margin: 0 auto;
+        padding: 48px 28px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 780;
+        letter-spacing: 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 292px;
+        gap: 28px;
+        align-items: start;
+      }
+
+      .panel {
+        display: grid;
+        gap: 14px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+        box-shadow: 0 20px 50px rgba(17, 22, 28, 0.08);
+      }
+
+      .label {
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 650;
+      }
+
+      .wide img,
+      .mark img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 820px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Autoservis Janov - upravene logo</h1>
+      <section class="panel wide">
+        <div class="label">Svetle pozadi</div>
+        <img src="logo-autoservis-janov-new.svg" alt="Autoservis Janov logo na svetlem pozadi">
+      </section>
+      <div class="grid">
+        <section class="panel wide">
+          <div class="label">Tmave pozadi</div>
+          <img src="logo-autoservis-janov-new-dark.svg" alt="Autoservis Janov logo na tmavem pozadi">
+        </section>
+        <section class="panel mark">
+          <div class="label">Kompaktni znacka</div>
+          <img src="logo-autoservis-janov-mark.svg" alt="Kompaktni znacka Autoservis Janov">
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Autoservis Janov compact mark</title>
+  <desc id="desc">Kompaktní značka Autoservis Janov se zjednodušenou siluetou vozu.</desc>
+  <rect x="16" y="16" width="208" height="208" rx="28" fill="#11161c"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 118c30-4 60-5 90-3 23 2 45 5 68 11" stroke="#67c75a" stroke-width="11"/>
+    <path d="M61 103c20-27 45-40 74-41h32c19 1 38 14 56 39" stroke="#ffffff" stroke-width="10"/>
+    <path d="M108 80h38c18 0 34 7 48 20" stroke="#ffffff" stroke-width="5" opacity=".62"/>
+  </g>
+  <circle cx="85" cy="130" r="8" fill="#ffffff"/>
+  <circle cx="187" cy="130" r="8" fill="#ffffff"/>
+  <text x="120" y="177" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, Helvetica, sans-serif" font-size="38" font-weight="850" letter-spacing="0">AJ</text>
+  <path d="M85 190h70" stroke="#67c75a" stroke-width="5" stroke-linecap="round"/>
+</svg>
