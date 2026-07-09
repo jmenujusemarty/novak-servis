@@ -30,6 +30,13 @@ MIRROR_ARGS=(
   --only-newer
   --exclude-glob .DS_Store
   --exclude-glob "Thumbs.db"
+  --exclude-glob ".env"
+  --exclude-glob ".env.*"
+  --exclude-glob "node_modules/**"
+  --exclude-glob "server.js"
+  --exclude-glob "hash-password.js"
+  --exclude-glob "package.json"
+  --exclude-glob "package-lock.json"
 )
 
 if [[ "$DELETE_FLAG" == "1" ]]; then

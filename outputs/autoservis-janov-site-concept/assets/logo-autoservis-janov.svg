@@ -1,10 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 176" role="img" aria-labelledby="title desc">
   <title id="title">Autoservis Janov</title>
-  <desc id="desc">Vektorové logo Autoservis Janov ve stylu tmavého loga z návrhu 02.</desc>
-  <rect width="520" height="160" rx="18" fill="#050708"/>
-  <path d="M78 69 C137 26 232 12 330 51" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
-  <path d="M64 78 C187 74 310 76 451 49" fill="none" stroke="#20a038" stroke-width="8" stroke-linecap="round"/>
-  <path d="M110 62 C165 46 216 42 280 49" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.92"/>
-  <text x="58" y="119" fill="#ffffff" font-family="Arial Black, Arial, Inter, system-ui, sans-serif" font-size="40" font-style="italic" font-weight="900" letter-spacing="-1.5">AUTOSERVIS</text>
-  <text x="350" y="119" fill="#20a038" font-family="Arial Black, Arial, Inter, system-ui, sans-serif" font-size="40" font-style="italic" font-weight="900" letter-spacing="-1.5">JANOV</text>
+  <desc id="desc">Moderni logo Autoservis Janov se servisnim symbolem a dvouradkovym wordmarkem.</desc>
+  <defs>
+    <linearGradient id="markGradient" x1="58" y1="24" x2="154" y2="134" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff6a1c"/>
+      <stop offset="1" stop-color="#d5252a"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#11161c" flood-opacity=".13"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="470" height="176" rx="42" fill="#ffffff" opacity=".96"/>
+  <rect x="1.5" y="1.5" width="467" height="173" rx="40.5" fill="none" stroke="#cfdbd6" stroke-opacity=".72" stroke-width="3"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="16" y="20" width="132" height="132" rx="34" fill="#ffffff" opacity=".94"/>
+    <rect x="25" y="29" width="114" height="114" rx="28" fill="url(#markGradient)"/>
+  </g>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z" transform="translate(36.4 40.4) scale(3.8)" fill="none" stroke="#ffffff" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="178" y="78" fill="#0c513b" font-family="Inter, SF Pro Display, Helvetica Neue, Arial, sans-serif" font-size="47" font-weight="840" letter-spacing="0">Autoservis</text>
+  <text x="178" y="128" fill="#11161c" font-family="Inter, SF Pro Display, Helvetica Neue, Arial, sans-serif" font-size="51" font-weight="840" letter-spacing="0">Janov</text>
+  <path d="M338 116h86" fill="none" stroke="#cfdbd6" stroke-width="5" stroke-linecap="round"/>
+  <path d="M338 116h42" fill="none" stroke="#ff5a1a" stroke-width="5" stroke-linecap="round"/>
 </svg>
