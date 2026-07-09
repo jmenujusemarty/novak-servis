@@ -1785,16 +1785,28 @@
       @media (max-width: 1120px) {
         .nav {
           grid-template-columns: auto minmax(0, 1fr);
-          gap: 24px;
+          gap: 18px;
           padding: 14px 0;
         }
 
-        .nav-cta {
-          display: none;
+        .nav-right {
+          gap: 16px;
+          justify-content: flex-end;
         }
 
-        .nav-right {
-          justify-content: flex-end;
+        .nav-links {
+          gap: 4px;
+        }
+
+        .nav-links a {
+          padding: 10px 11px;
+          font-size: 14px;
+        }
+
+        .nav-cta .button {
+          min-height: 42px;
+          padding: 0 16px;
+          font-size: 14px;
         }
 
         .hero,
@@ -1953,6 +1965,10 @@
           justify-self: stretch;
           width: 100%;
           padding-bottom: 4px;
+        }
+
+        .nav-cta {
+          display: none;
         }
 
         .nav-toggle:checked ~ .nav-right {
@@ -2482,7 +2498,7 @@
           <div class="facts">
             <div class="fact">
               <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-              <div><a href="https://maps.google.com/?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor"><strong>Janov 166, 473&nbsp;01 Nový Bor</strong></a><span>Servis pro Nový Bor a okolí.</span></div>
+              <div><a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58"><strong>Janov 166, 473&nbsp;01 Nový Bor</strong></a><span>Servis pro Nový Bor a okolí.</span></div>
             </div>
             <div class="fact">
               <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M12 7v6l4 2"/></svg>
@@ -2495,7 +2511,7 @@
             <source type="image/avif" srcset="assets/exterior-800.avif 800w, assets/exterior-1200.avif 1200w" sizes="(max-width: 760px) 100vw, 44vw">
             <img src="assets/exterior.jpg" width="1800" height="1350" alt="Exteriér autoservisu" fetchpriority="high" decoding="async">
           </picture>
-          <figcaption class="media-note"><strong>Autoservis Janov</strong><a href="https://maps.google.com/?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor">Janov 166, Nový Bor. Zavolejte nebo se zastavte v otevírací době.</a></figcaption>
+          <figcaption class="media-note"><strong>Autoservis Janov</strong><a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, Nový Bor. Zavolejte nebo se zastavte v otevírací době.</a></figcaption>
         </figure>
       </section>
 
@@ -2752,7 +2768,7 @@
             <p class="lead">Termíny řešíme nejraději telefonicky nebo osobně přímo v servisu. Je to nejrychlejší způsob, jak upřesnit vůz, rozsah práce a vhodný čas.</p>
             <div class="contact-list">
               <div class="contact-item"><strong>Telefon</strong><a href="tel:+420777832015">+420&nbsp;777&nbsp;832&nbsp;015</a></div>
-              <div class="contact-item"><strong>Adresa servisu</strong><a href="https://maps.google.com/?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor">Janov 166, 473&nbsp;01 Nový Bor</a></div>
+              <div class="contact-item"><strong>Adresa servisu</strong><a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></div>
               <div class="contact-item"><strong>Provozní doba</strong><span>Pondělí-pátek 8:15-11:00 / 12:00-16:30</span><span>Sobota, neděle zavřeno</span></div>
               <div class="contact-item"><strong>Po domluvě</strong><span>Po telefonické domluvě možný i jiný časový termín.</span></div>
               <div class="contact-item"><strong>Odpovědný vedoucí</strong><a href="tel:+420777832015">Martin Novák +420&nbsp;777&nbsp;832&nbsp;015</a></div>
@@ -2764,14 +2780,14 @@
               <p>Krátký hovor většinou stačí k domluvě termínu a prvního postupu. Pokud jste poblíž, zastavte se v otevírací době.</p>
               <div class="contact-actions">
                 <a class="button button-call" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
-                <a class="button-outline" href="https://maps.google.com/?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor">Ukázat adresu</a>
+                <a class="button-outline" href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Ukázat adresu</a>
               </div>
             </div>
             <div class="contact-map">
-              <iframe title="Mapa Autoservis Janov" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor&output=embed"></iframe>
+              <iframe title="Mapa Autoservis Janov" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=50.740688,14.5810091&z=17&output=embed"></iframe>
               <div class="contact-map-caption">
-                <a class="map-address" href="https://maps.google.com/?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor"><strong>Janov 166</strong><span>473&nbsp;01 Nový Bor</span></a>
-                <a href="https://maps.google.com/?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor">Otevřít mapu</a>
+                <a class="map-address" href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58"><strong>Janov 166</strong><span>473&nbsp;01 Nový Bor</span></a>
+                <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Otevřít mapu</a>
               </div>
             </div>
           </div>
@@ -2795,7 +2811,7 @@
               <ul class="person-details">
                 <li><strong>Telefon:</strong> <a href="tel:+420777832015">+420&nbsp;777&nbsp;832&nbsp;015</a></li>
                 <li><strong>IČO / DIČ:</strong> 67855237 / CZ7307232317</li>
-                <li><strong>Adresa:</strong> <a href="https://maps.google.com/?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor">Janov 166, 473&nbsp;01 Nový Bor</a></li>
+                <li><strong>Adresa:</strong> <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></li>
               </ul>
             </div>
           </article>
@@ -2832,7 +2848,7 @@
             <li><strong>Martin Novák</strong></li>
             <li><a href="tel:+420777832015">+420&nbsp;777&nbsp;832&nbsp;015</a></li>
             <li>IČO: 67855237 / DIČ: CZ7307232317</li>
-            <li><a href="https://maps.google.com/?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor">Janov 166, 473&nbsp;01 Nový Bor</a></li>
+            <li><a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></li>
             <li><strong>Luděk Loos</strong></li>
             <li><a href="tel:+420737712217">+420&nbsp;737&nbsp;712&nbsp;217</a></li>
             <li>IČO: 29741947 / DIČ: CZ29741947</li>
@@ -2862,7 +2878,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>Autoservis Janov, <a href="https://maps.google.com/?q=Janov%20166%2C%20473%2001%20Nov%C3%BD%20Bor">Janov 166, 473&nbsp;01 Nový Bor</a></span>
+        <span>Autoservis Janov, <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></span>
         <span>Po telefonické domluvě možný i jiný časový termín.</span>
       </div>
     </footer>
