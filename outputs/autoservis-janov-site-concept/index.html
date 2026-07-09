@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Autoservis Janov | Pneuservis a diagnostika Nový Bor</title>
-    <meta name="description" content="Autoservis Janov u Nového Boru pro Českou Lípu a okolí. Běžný servis, pneuservis, diagnostika, klimatizace, brzdy, příprava na STK a oleje Castrol.">
+    <title>Autoservis Nový Bor a Česká Lípa | Autoservis Janov</title>
+    <meta name="description" content="Autoservis Janov u Nového Boru pro Českou Lípu: opravy, pneuservis, diagnostika, klimatizace, geometrie a příprava na STK. Volejte 777 832 015.">
     <meta name="robots" content="index,follow">
     <meta name="author" content="Autoservis Janov">
     <meta name="theme-color" content="#0c513b">
@@ -13,13 +13,13 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="cs_CZ">
     <meta property="og:site_name" content="Autoservis Janov">
-    <meta property="og:title" content="Autoservis Janov u Nového Boru | Servis pro Českou Lípu a okolí">
+    <meta property="og:title" content="Autoservis Nový Bor a Česká Lípa | Autoservis Janov">
     <meta property="og:description" content="Autoservis, pneuservis, diagnostika, klimatizace a příprava na STK v Janově u Nového Boru. Partner značky Castrol.">
     <meta property="og:url" content="https://www.autoservisjanov.cz/">
     <meta property="og:image" content="https://www.autoservisjanov.cz/assets/exterior.jpg">
     <meta property="og:image:alt" content="Exteriér autoservisu Autoservis Janov">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Autoservis Janov u Nového Boru | Pneuservis a diagnostika">
+    <meta name="twitter:title" content="Autoservis Nový Bor a Česká Lípa | Autoservis Janov">
     <meta name="twitter:description" content="Servis, pneuservis, diagnostika, klimatizace a příprava na STK pro Nový Bor, Českou Lípu a okolí.">
     <meta name="twitter:image" content="https://www.autoservisjanov.cz/assets/exterior.jpg">
     <script type="application/ld+json">
@@ -81,7 +81,11 @@
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brzdy a podvozek"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Výměna oleje Castrol"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digitální servisní knížka VW Group"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Menší karosářské práce"}}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Menší karosářské práce"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Geometrie kol"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Odtah vozů"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Prodej vozů"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Import vozů z Německa"}}
         ],
         "knowsAbout": [
           "Volkswagen",
@@ -92,7 +96,9 @@
           "Castrol"
         ],
         "sameAs": [
-          "https://www.facebook.com/novakautoservis/"
+          "https://www.facebook.com/novakautoservis/",
+          "https://maps.app.goo.gl/hzoNh6EBdeUgtRS58",
+          "https://share.google/fpvBWROHpCz88LXU6"
         ]
       }
     </script>
@@ -106,7 +112,7 @@
             "name": "Musím kvůli zápisu do digitální servisní knížky VW Group do autorizovaného servisu?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ne. Zápis do servisní knihy VW Group lze po domluvě řešit i u nás podle konkrétního vozu a provedené servisní práce."
+              "text": "Ne. Zápis do servisní knihy VW Group řešíme podle konkrétního vozu a provedené servisní práce."
             }
           },
           {
@@ -123,6 +129,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Ano. Provedeme kontrolu vozu před technickou kontrolou, upozorníme na závady a domluvíme potřebné opravy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Řešíte geometrii kol?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ano, geometrii kol zmiňujeme mezi službami. Konkrétní postup a termín vždy upřesníme podle vozu."
             }
           }
         ]
@@ -1116,6 +1130,12 @@
         line-height: 1.38;
       }
 
+      .service-detail-actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+      }
+
       .partner-section {
         padding-top: 0;
       }
@@ -1185,6 +1205,57 @@
 
       .partner-note {
         margin-top: 18px;
+      }
+
+      .seo-service-section {
+        padding-top: 0;
+      }
+
+      .seo-service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .seo-service-card {
+        min-height: 100%;
+        padding: 20px;
+        border: 1px solid rgba(12, 81, 59, 0.1);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.56);
+        box-shadow: var(--glass-shadow);
+        backdrop-filter: blur(18px) saturate(145%);
+        -webkit-backdrop-filter: blur(18px) saturate(145%);
+      }
+
+      .seo-service-card h3 {
+        margin-bottom: 8px;
+        font-size: 19px;
+        line-height: 1.18;
+      }
+
+      .seo-service-card p,
+      .seo-service-card li {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.48;
+      }
+
+      .seo-service-card ul {
+        display: grid;
+        gap: 6px;
+        margin: 12px 0 0;
+        padding-left: 18px;
+      }
+
+      .seo-service-link {
+        display: inline-flex;
+        margin-top: 14px;
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 800;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
       }
 
       .wide-layout {
@@ -1554,9 +1625,38 @@
       }
 
       .review-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         margin-top: 16px;
         color: var(--muted);
         font-size: 14px;
+      }
+
+      .maps-logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+      }
+
+      .maps-logo svg {
+        display: block;
+        width: 22px;
+        height: 22px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
 
       .source-note {
@@ -2163,6 +2263,10 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        .seo-service-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .experience-card {
           grid-template-columns: 1fr;
         }
@@ -2416,6 +2520,10 @@
           grid-template-columns: 1fr;
         }
 
+        .seo-service-grid {
+          grid-template-columns: 1fr;
+        }
+
         .brand-tile {
           min-height: 0;
           padding: 16px 13px;
@@ -2554,7 +2662,7 @@
             </div>
             <div class="fact">
               <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M12 7v6l4 2"/></svg>
-              <div><strong>Po-Pá 8:15-11:00 / 12:00-16:30</strong><span>Po telefonické domluvě možný i jiný časový termín.</span></div>
+              <div><strong>Po-Pá 8:15-11:00 / 12:00-16:30</strong><span>Termíny řešíme telefonicky nebo osobně v servisu.</span></div>
             </div>
           </div>
         </div>
@@ -2579,7 +2687,9 @@
             <a class="chip" href="#sluzby">Příprava na STK</a>
             <a class="chip" href="#sluzby">Geometrie</a>
             <a class="chip" href="#sluzby">Karosářské práce</a>
-            <a class="chip" href="#kontakt">Odtah po domluvě</a>
+            <a class="chip" href="#sluzby">Odtah vozů</a>
+            <a class="chip" href="#sluzby">Prodej vozů</a>
+            <a class="chip" href="#sluzby">Import vozů z Německa</a>
             <a class="chip" href="#kontakt">Náhradní vůz</a>
           </div>
         </div>
@@ -2594,18 +2704,18 @@
             <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></svg></div>
             <div>
               <div class="service-title-row"><h3>Běžný servis a opravy</h3><span class="service-count">4 oblasti</span></div>
-              <p>Pravidelný servis i běžné opravy motorů, podvozků, brzd a převodovek pro osobní i dodávkové vozy.</p>
-              <div class="chip-list"><span class="chip">Motory</span><span class="chip">Podvozky</span><span class="chip">Brzdy</span><span class="chip">Převodovky</span><span class="chip">Oleje Castrol</span><span class="chip">Digitální servisní knížka VW Group</span></div>
-              <p class="service-extra"><strong>+ další:</strong> pravidelný servis, baterie, rozvody, oleje Castrol a servisní záznamy VW Group.</p>
+              <p>Kompletní autoservis pro osobní i dodávkové vozy: mechanické opravy, servisní prohlídky, brzdy, podvozky, převodovky, diagnostika i příprava na STK.</p>
+              <div class="chip-list"><span class="chip">Mechanické opravy</span><span class="chip">Servisní prohlídky</span><span class="chip">Brzdy</span><span class="chip">Podvozky</span><span class="chip">Geometrie</span><span class="chip">Příprava na STK</span></div>
+              <p class="service-extra"><strong>+ další:</strong> výměna oleje a filtrů, baterie, rozvody, klimatizace, oleje Castrol a servisní záznamy VW Group.</p>
             </div>
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></svg></div>
             <div>
               <div class="service-title-row"><h3>Pneuservis</h3><span class="service-count">3 služby</span></div>
-              <p>Sezónní přezutí, vyvážení kol, kontrola pneumatik a opravy defektů podle aktuálního stavu vozu.</p>
-              <div class="chip-list"><span class="chip">Přezouvání</span><span class="chip">Vyvažování</span><span class="chip">Kontrola pneu</span></div>
-              <p class="service-extra"><strong>+ další:</strong> oprava defektu a TPMS kontrola.</p>
+              <p>Pneuservis pro osobní vozy a dodávky: sezónní přezutí, montáž a vyvážení kol, kontrola pneumatik, opravy defektů i doporučení vhodného obutí.</p>
+              <div class="chip-list"><span class="chip">Přezouvání pneu</span><span class="chip">Vyvažování kol</span><span class="chip">Opravy pneumatik</span><span class="chip">Prodej pneu</span><span class="chip">ALU a ocelové disky</span></div>
+              <p class="service-extra"><strong>+ další:</strong> TPMS kontrola, výměna poškozených ráfků, ekologická likvidace ojetých pneu a sezónní uskladnění kol.</p>
             </div>
           </article>
           <article class="service-card">
@@ -2631,17 +2741,26 @@
             <div>
               <div class="service-title-row"><h3>Příprava na STK</h3><span class="service-count">2 služby</span></div>
               <p>Prohlídka vozu před technickou kontrolou. Upozorníme na závady a domluvíme potřebné opravy.</p>
-              <div class="chip-list"><span class="chip">Kompletní prohlídka</span><span class="chip">Poradenství</span></div>
-              <p class="service-extra"><strong>+ další:</strong> STK, emise a kontrola vozu před cestou.</p>
+              <div class="chip-list"><span class="chip">Kompletní prohlídka</span><span class="chip">Poradenství</span><span class="chip">Geometrie</span></div>
+              <p class="service-extra"><strong>+ další:</strong> STK, emise, geometrie a kontrola vozu před cestou.</p>
             </div>
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/></svg></div>
             <div>
               <div class="service-title-row"><h3>Karosářské práce</h3><span class="service-count">3 oblasti</span></div>
-              <p>Menší karosářské opravy, korozní práce a lakování řešíme po domluvě s ověřenými partnery v regionu.</p>
+              <p>Menší karosářské opravy, korozní práce a lakování řešíme ve spolupráci s ověřenými partnery v regionu.</p>
               <div class="chip-list"><span class="chip">Opravy plechů</span><span class="chip">Lakování</span><span class="chip">Antikoroze</span></div>
               <p class="service-extra"><strong>+ další:</strong> lokální opravy karoserie a ochrana proti korozi.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18l-2-6H5l-2 6Z"/><path d="M6 17a2 2 0 1 0 4 0"/><path d="M14 17a2 2 0 1 0 4 0"/><path d="M7 11l2-4h6l2 4"/><path d="M3 21h18"/><path d="M18 4h3v3"/></svg></div>
+            <div>
+              <div class="service-title-row"><h3>Odtah, prodej a import vozů</h3><span class="service-count">3 služby</span></div>
+              <p>Pomůžeme s odtahem vozu, prodejem vozů i dovozem auta z Německa. Vždy podle domluvy a konkrétního požadavku.</p>
+              <div class="chip-list"><span class="chip">Odtah vozů</span><span class="chip">Prodej vozů</span><span class="chip">Import vozů z Německa</span><span class="chip">Náhradní vůz</span></div>
+              <p class="service-extra"><strong>+ další:</strong> prověření vozu, domluva přepravy a základní servis po dovozu podle stavu auta.</p>
             </div>
           </article>
         </div>
@@ -2653,6 +2772,87 @@
               <div><strong>Digitální servisní knížka VW Group</strong><span>Pro zápis do servisní knihy nemusíte jezdit do autorizovaného servisu.</span></div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="seo-service-section" aria-labelledby="seo-services-title">
+        <div class="section-head">
+          <div>
+            <h2 id="seo-services-title">Autoservis pro Nový Bor, Českou Lípu a okolí</h2>
+            <p>Do Janova přijíždějí zákazníci z Nového Boru, České Lípy i okolních obcí. Připravili jsme přehled nejčastějších služeb, které lidé hledají při výběru autoservisu nebo pneuservisu v okolí.</p>
+          </div>
+        </div>
+        <div class="seo-service-grid">
+          <article class="seo-service-card">
+            <h3>Autoservis Nový Bor</h3>
+            <p>Hledáte autoservis u Nového Boru pro běžnou údržbu nebo opravu vozu? V Janově řešíme pravidelné servisní prohlídky, výměny oleje a filtrů, brzdy, podvozky, baterie, rozvody i další mechanické opravy osobních a dodávkových vozů.</p>
+            <ul>
+              <li>mechanické opravy motoru, brzd, podvozku a převodovky</li>
+              <li>pravidelný servis, oleje Castrol a servisní intervaly</li>
+              <li>domluva postupu podle stavu konkrétního auta</li>
+            </ul>
+            <a class="seo-service-link" href="autoservis-novy-bor/">Více o autoservisu pro Nový Bor</a>
+          </article>
+          <article class="seo-service-card">
+            <h3>Autoservis Česká Lípa</h3>
+            <p>Řidiči z České Lípy a Českolipska k nám jezdí hlavně kvůli osobní domluvě a srozumitelnému vysvětlení opravy. Nejdřív zkontrolujeme stav vozu, podle potřeby doplníme diagnostiku a potom domluvíme rozsah prací i orientační cenu.</p>
+            <ul>
+              <li>servis osobních i dodávkových vozů</li>
+              <li>specializace na VW Group a Opel</li>
+              <li>opravy bez zbytečných prací navíc</li>
+            </ul>
+            <a class="seo-service-link" href="autoservis-ceska-lipa/">Více o autoservisu pro Českou Lípu</a>
+          </article>
+          <article class="seo-service-card">
+            <h3>Pneuservis Nový Bor a Česká Lípa</h3>
+            <p>Pneuservis zajišťujeme pro sezónní přezutí letních a zimních pneumatik, montáž a vyvážení kol, kontrolu stavu pneumatik i opravy defektů. Podle potřeby poradíme s výběrem vhodného obutí a prověříme stav ráfků.</p>
+            <ul>
+              <li>přezouvání pneu, vyvažování kol a kontrola tlaku</li>
+              <li>opravy propíchnutých pneumatik a TPMS kontrola</li>
+              <li>prodej pneumatik, ALU a ocelových disků</li>
+            </ul>
+            <a class="seo-service-link" href="pneuservis-novy-bor/">Více o pneuservisu</a>
+          </article>
+          <article class="seo-service-card">
+            <h3>Diagnostika vozidel</h3>
+            <p>Elektronická diagnostika pomůže rychleji určit příčinu závady a zvolit správný servisní postup. Čteme chybové kódy, kontrolujeme řídicí jednotky, mažeme servisní intervaly a u vybraných vozů řešíme návaznost na digitální servisní knížku VW Group.</p>
+            <ul>
+              <li>OBD diagnostika, čtení a mazání chyb</li>
+              <li>servisní reset a kontrola elektroniky</li>
+              <li>doporučení dalšího postupu před opravou</li>
+            </ul>
+            <a class="seo-service-link" href="diagnostika-vozidel/">Více o diagnostice</a>
+          </article>
+          <article class="seo-service-card">
+            <h3>Klimatizace a příprava na STK</h3>
+            <p>U klimatizace řešíme kontrolu funkce, plnění chladiva, čištění a dezinfekci systému. Před technickou kontrolou projdeme základní části vozu, upozorníme na závady a domluvíme opravy, které dávají smysl před návštěvou STK.</p>
+            <ul>
+              <li>plnění, čištění a dezinfekce klimatizace</li>
+              <li>kontrola brzd, podvozku, světel a provozních kapalin</li>
+              <li>příprava na STK a emise podle stavu vozu</li>
+            </ul>
+            <a class="seo-service-link" href="servis-klimatizace/">Více o klimatizaci</a>
+            <a class="seo-service-link" href="priprava-na-stk/">Více o přípravě na STK</a>
+          </article>
+          <article class="seo-service-card">
+            <h3>Geometrie kol</h3>
+            <p>Geometrii kol řešíme typicky po zásahu do podvozku, při nerovnoměrném sjíždění pneumatik nebo když auto táhne ke straně. Nejdřív ověříme stav vozu a podle situace doporučíme vhodný postup.</p>
+            <ul>
+              <li>kontrola podvozku před nastavením geometrie</li>
+              <li>řešení nerovnoměrného sjíždění pneumatik</li>
+              <li>návaznost na pneuservis a opravy podvozku</li>
+            </ul>
+            <a class="seo-service-link" href="geometrie-kol/">Více o geometrii kol</a>
+          </article>
+          <article class="seo-service-card">
+            <h3>Odtah vozů, prodej vozů a import z Německa</h3>
+            <p>Po domluvě pomůžeme také s odtahem vozů, prodejem vybraných aut a importem vozů z Německa. U dovezeného auta umíme navázat kontrolou stavu a běžným servisem.</p>
+            <ul>
+              <li>odtah vozů podle domluvy a aktuálních možností</li>
+              <li>prodej vozů a pomoc s výběrem vhodného auta</li>
+              <li>import vozů z Německa včetně následné servisní kontroly</li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -2773,6 +2973,7 @@
               <div class="price-row"><div><h3>Servis klimatizace</h3><p>Kontrola, plnění, čištění a dezinfekce klimatizace podle potřeby.</p></div><span class="price-status">Od ___ Kč</span></div>
               <div class="price-row"><div><h3>Kontrola brzd</h3><p>Kontrola stavu destiček, kotoučů, brzdové kapaliny a doporučení opravy.</p></div><span class="price-status">Od ___ Kč</span></div>
               <div class="price-row"><div><h3>Příprava na STK</h3><p>Prohlídka základních částí vozu před technickou kontrolou.</p></div><span class="price-status">Od ___ Kč</span></div>
+              <div class="price-row"><div><h3>Odtah, prodej a import vozů</h3><p>Odtah vozů, prodej vozů a import vozů z Německa řešíme podle konkrétní domluvy.</p></div><span class="price-status">Dle domluvy</span></div>
               <div class="price-row"><div><h3>Běžná servisní práce</h3><p>Menší opravy a údržba účtovaná podle rozsahu práce a domluvy.</p></div><span class="price-status">Od ___ Kč</span></div>
             </div>
           </details>
@@ -2792,24 +2993,23 @@
             <div class="stars" aria-label="Pět hvězdiček">★★★★★</div>
             <blockquote>„Příjemné jednání a hlavně skutečně odborný a kvalifikovaný přístup.“</blockquote>
             <p>Recenze zmiňuje řešení problému a odbornou komunikaci.</p>
-            <div class="review-meta">Jan J. · GoogleMap recenze</div>
+            <div class="review-meta"><span>Jan J.</span><span class="maps-logo" role="img" aria-label="Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M12 23s7-6.38 7-13A7 7 0 0 0 5 10c0 6.62 7 13 7 13Z"/><path fill="#FBBC04" d="M12 23S5 16.62 5 10a7 7 0 0 1 7-7v20Z"/><path fill="#4285F4" d="M12 23s7-6.38 7-13a7 7 0 0 0-7-7v6.9a2.1 2.1 0 0 1 0 4.2V23Z"/><path fill="#EA4335" d="M12 3a7 7 0 0 0-5.05 11.85L12 9.9V3Z"/><circle cx="12" cy="10" r="2.2" fill="#fff"/></svg></span></div>
           </article>
           <article class="review-card">
             <div class="stars" aria-label="Pět hvězdiček">★★★★★</div>
             <blockquote>„Jednoznačně nejlepší přístup, ochota, jednání. Odborník na svém místě.“</blockquote>
             <p>Zákazník oceňuje také pomoc a užitečné rady.</p>
-            <div class="review-meta">Lukáš M. · GoogleMap recenze</div>
+            <div class="review-meta"><span>Lukáš M.</span><span class="maps-logo" role="img" aria-label="Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M12 23s7-6.38 7-13A7 7 0 0 0 5 10c0 6.62 7 13 7 13Z"/><path fill="#FBBC04" d="M12 23S5 16.62 5 10a7 7 0 0 1 7-7v20Z"/><path fill="#4285F4" d="M12 23s7-6.38 7-13a7 7 0 0 0-7-7v6.9a2.1 2.1 0 0 1 0 4.2V23Z"/><path fill="#EA4335" d="M12 3a7 7 0 0 0-5.05 11.85L12 9.9V3Z"/><circle cx="12" cy="10" r="2.2" fill="#fff"/></svg></span></div>
           </article>
           <article class="review-card">
             <div class="stars" aria-label="Pět hvězdiček">★★★★★</div>
             <blockquote>„Pán velmi ochotný, milý. Skvělý přístup.“</blockquote>
             <p>Zákaznice servis doporučuje a děkuje za přístup.</p>
-            <div class="review-meta">Kirsten M. · GoogleMap recenze</div>
+            <div class="review-meta"><span>Kirsten M.</span><span class="maps-logo" role="img" aria-label="Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M12 23s7-6.38 7-13A7 7 0 0 0 5 10c0 6.62 7 13 7 13Z"/><path fill="#FBBC04" d="M12 23S5 16.62 5 10a7 7 0 0 1 7-7v20Z"/><path fill="#4285F4" d="M12 23s7-6.38 7-13a7 7 0 0 0-7-7v6.9a2.1 2.1 0 0 1 0 4.2V23Z"/><path fill="#EA4335" d="M12 3a7 7 0 0 0-5.05 11.85L12 9.9V3Z"/><circle cx="12" cy="10" r="2.2" fill="#fff"/></svg></span></div>
           </article>
         </div>
         <div class="review-actions">
-          <a class="button-outline" href="https://search.google.com/local/reviews?placeid=ChIJX2il-2VrCUcRdTR28HvXFYU">Zobrazit Google recenze</a>
-          <p class="source-note">Citace vychází z veřejně dostupných GoogleMap recenzí.</p>
+          <a class="button-outline" href="https://search.google.com/local/reviews?placeid=ChIJX2il-2VrCUcRdTR28HvXFYU">Zobrazit další Google recenze</a>
         </div>
       </section>
 
@@ -2822,7 +3022,7 @@
               <div class="contact-item"><strong>Telefon</strong><a href="tel:+420777832015">+420&nbsp;777&nbsp;832&nbsp;015</a></div>
               <div class="contact-item"><strong>Adresa servisu</strong><a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></div>
               <div class="contact-item"><strong>Provozní doba</strong><span>Pondělí-pátek 8:15-11:00 / 12:00-16:30</span><span>Sobota, neděle zavřeno</span></div>
-              <div class="contact-item"><strong>Po domluvě</strong><span>Po telefonické domluvě možný i jiný časový termín.</span></div>
+              <div class="contact-item"><strong>Termíny</strong><span>Termín servisu nejrychleji upřesníme telefonicky nebo osobně.</span></div>
               <div class="contact-item"><strong>Odpovědný vedoucí</strong><a href="tel:+420777832015">Martin Novák +420&nbsp;777&nbsp;832&nbsp;015</a></div>
             </div>
           </aside>
@@ -2915,7 +3115,7 @@
             <li><strong>8:15-11:00 / 12:00-16:30</strong></li>
             <li>Sobota, neděle</li>
             <li><strong>Zavřeno</strong></li>
-            <li>Po telefonické domluvě možný i jiný časový termín.</li>
+            <li>Termín servisu nejrychleji upřesníme telefonicky nebo osobně.</li>
             <li>Odpovědný vedoucí: <a href="tel:+420777832015">Martin Novák +420&nbsp;777&nbsp;832&nbsp;015</a></li>
           </ul>
         </div>
@@ -2931,7 +3131,7 @@
       </div>
       <div class="footer-bottom">
         <span>Autoservis Janov, <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></span>
-        <span>Po telefonické domluvě možný i jiný časový termín.</span>
+        <span>Termíny řešíme telefonicky nebo osobně v servisu.</span>
       </div>
     </footer>
     <script>
