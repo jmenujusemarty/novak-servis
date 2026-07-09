@@ -26,7 +26,7 @@ export AUTOSERVIS_DEPLOY_PASSWORD='your-password'
 Optional settings:
 
 ```bash
-export AUTOSERVIS_DEPLOY_REMOTE_DIR='.'
+export AUTOSERVIS_DEPLOY_REMOTE_DIR='autoservisjanov.cz'
 export AUTOSERVIS_DEPLOY_DELETE=1
 ```
 

@@ -4,7 +4,7 @@ set -euo pipefail
 HOST="${AUTOSERVIS_DEPLOY_HOST:-replikant3617.thinline.cz}"
 PORT="${AUTOSERVIS_DEPLOY_PORT:-2295}"
 USER="${AUTOSERVIS_DEPLOY_USER:-autoservisjanov_cz}"
-REMOTE_DIR="${AUTOSERVIS_DEPLOY_REMOTE_DIR:-.}"
+REMOTE_DIR="${AUTOSERVIS_DEPLOY_REMOTE_DIR:-autoservisjanov.cz}"
 LOCAL_DIR="${AUTOSERVIS_DEPLOY_LOCAL_DIR:-outputs/autoservis-janov-site-concept}"
 DELETE_FLAG="${AUTOSERVIS_DEPLOY_DELETE:-0}"
 
