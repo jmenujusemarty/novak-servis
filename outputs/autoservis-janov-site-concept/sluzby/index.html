@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Služby autoservisu | Autoservis Janov</title>
-    <meta name="description" content="Detail služeb Autoservis Janov: autoservis pro Nový Bor a Českou Lípu, pneuservis, diagnostika, klimatizace, příprava na STK, geometrie, odtah a import vozů.">
+    <meta name="description" content="Přehled služeb Autoservis Janov: běžný servis, pneuservis, diagnostika, klimatizace, brzdy, geometrie, příprava na STK, odtah a import vozů.">
     <meta name="robots" content="index,follow">
+    <meta name="google-site-verification" content="3fx-0OxVX174_saiDblWYC7OhIOBFIh-AokVf8D31rs">
     <link rel="canonical" href="https://www.autoservisjanov.cz/sluzby/">
     <link rel="icon" href="../assets/logo-autoservis-janov-mark.svg" type="image/svg+xml">
     <meta property="og:type" content="website">
@@ -15,19 +16,45 @@
     <meta property="og:description" content="Autoservis, pneuservis, diagnostika, klimatizace a příprava na STK pro Nový Bor, Českou Lípu a okolí.">
     <meta property="og:url" content="https://www.autoservisjanov.cz/sluzby/">
     <meta property="og:image" content="https://www.autoservisjanov.cz/assets/exterior.jpg">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Služby autoservisu Autoservis Janov",
+        "url": "https://www.autoservisjanov.cz/sluzby/",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Autoservis Janov",
+          "url": "https://www.autoservisjanov.cz/"
+        },
+        "about": {
+          "@type": "AutoRepair",
+          "name": "Autoservis Janov",
+          "telephone": "+420777832015",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Janov 166",
+            "addressLocality": "Nový Bor",
+            "postalCode": "473 01",
+            "addressCountry": "CZ"
+          }
+        }
+      }
+    </script>
     <style>
       :root {
-        --bg: #f5f9f7;
-        --paper: rgba(255, 255, 255, 0.68);
-        --ink: #11161c;
-        --muted: #64707a;
-        --line: rgba(207, 219, 214, 0.72);
+        --bg: #f3f8f5;
+        --surface: rgba(255, 255, 255, 0.72);
+        --surface-strong: rgba(255, 255, 255, 0.9);
+        --ink: #10171c;
+        --muted: #63717b;
         --green: #0c513b;
-        --green-2: #0a3f31;
-        --pale: #edf4f1;
-        --shadow: 0 16px 44px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.62);
-        --radius: 22px;
-        --pill: 100px;
+        --green-deep: #07372b;
+        --line: rgba(12, 81, 59, 0.14);
+        --soft: rgba(12, 81, 59, 0.08);
+        --shadow: 0 20px 54px rgba(15, 23, 42, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.74);
+        --radius: 24px;
+        --pill: 999px;
         --max: 1180px;
       }
 
@@ -35,11 +62,13 @@
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
-        background:
-          radial-gradient(circle at 10% 0%, rgba(12, 81, 59, 0.08), transparent 34%),
-          linear-gradient(180deg, #ffffff 0%, var(--bg) 34%, #eef6f2 100%);
+        background: var(--bg);
         color: var(--ink);
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -49,20 +78,25 @@
         color: inherit;
       }
 
+      a:focus-visible {
+        outline: 3px solid rgba(12, 81, 59, 0.28);
+        outline-offset: 3px;
+      }
+
       .site-header {
         position: sticky;
         top: 0;
-        z-index: 10;
+        z-index: 20;
         border-bottom: 1px solid var(--line);
-        background: rgba(245, 249, 247, 0.86);
-        backdrop-filter: blur(16px) saturate(140%);
-        -webkit-backdrop-filter: blur(16px) saturate(140%);
+        background: rgba(243, 248, 245, 0.84);
+        backdrop-filter: blur(18px) saturate(140%);
+        -webkit-backdrop-filter: blur(18px) saturate(140%);
       }
 
       .nav,
       main,
       .footer-inner {
-        width: min(calc(100% - 36px), var(--max));
+        width: min(calc(100% - 40px), var(--max));
         margin: 0 auto;
       }
 
@@ -78,13 +112,15 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
+        min-width: 0;
         color: var(--ink);
-        font-weight: 780;
+        font-weight: 800;
         text-decoration: none;
       }
 
       .brand-icon {
         display: grid;
+        flex: 0 0 auto;
         place-items: center;
         width: 38px;
         height: 38px;
@@ -93,13 +129,16 @@
         color: #ffffff;
       }
 
-      .brand-icon svg {
+      .brand-icon svg,
+      .button svg,
+      .service-icon svg {
         width: 21px;
         height: 21px;
         stroke-width: 2.25;
       }
 
-      .nav-actions {
+      .nav-actions,
+      .hero-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -110,86 +149,140 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 44px;
-        padding: 0 16px;
+        gap: 9px;
+        min-height: 46px;
+        padding: 0 17px;
         border-radius: var(--pill);
         font-size: 14px;
-        font-weight: 720;
+        font-weight: 800;
         text-decoration: none;
+        white-space: nowrap;
       }
 
       .button {
         background: var(--green);
         color: #ffffff;
+        box-shadow: 0 12px 26px rgba(12, 81, 59, 0.18);
       }
 
       .button-outline {
-        border: 1px solid rgba(12, 81, 59, 0.18);
+        border: 1px solid var(--line);
         background: rgba(255, 255, 255, 0.62);
         color: var(--green);
       }
 
       main {
-        padding: 58px 0 74px;
+        padding: 54px 0 76px;
       }
 
       .hero {
         display: grid;
-        grid-template-columns: minmax(0, 0.98fr) minmax(320px, 0.72fr);
-        gap: 28px;
-        align-items: end;
-        margin-bottom: 34px;
+        grid-template-columns: minmax(0, 1fr) minmax(310px, 0.42fr);
+        gap: 26px;
+        align-items: stretch;
+        margin-bottom: 24px;
+      }
+
+      .hero-copy,
+      .hero-panel,
+      .service-nav,
+      .service-card,
+      .contact-strip {
+        border: 1px solid var(--line);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(20px) saturate(145%);
+        -webkit-backdrop-filter: blur(20px) saturate(145%);
+      }
+
+      .hero-copy {
+        padding: clamp(28px, 5vw, 52px);
+        border-radius: 30px;
       }
 
       .eyebrow {
         display: inline-flex;
         align-items: center;
-        min-height: 32px;
-        margin-bottom: 16px;
+        min-height: 30px;
+        margin-bottom: 18px;
         padding: 0 12px;
+        border: 1px solid rgba(12, 81, 59, 0.1);
         border-radius: var(--pill);
-        background: rgba(12, 81, 59, 0.1);
+        background: var(--soft);
         color: var(--green);
         font-size: 12px;
-        font-weight: 760;
+        font-weight: 850;
         text-transform: uppercase;
       }
 
       h1 {
-        max-width: 850px;
+        max-width: 820px;
         margin: 0;
-        font-size: clamp(42px, 6vw, 76px);
-        line-height: 0.98;
+        font-size: clamp(40px, 6vw, 72px);
+        line-height: 1;
         letter-spacing: 0;
       }
 
       .lead {
         max-width: 760px;
-        margin: 22px 0 0;
+        margin: 20px 0 0;
         color: var(--muted);
-        font-size: clamp(18px, 2vw, 24px);
-        line-height: 1.48;
+        font-size: clamp(18px, 2vw, 23px);
+        line-height: 1.45;
       }
 
-      .hero-card {
-        padding: 22px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--paper);
-        box-shadow: var(--shadow);
+      .hero-actions {
+        margin-top: 26px;
       }
 
-      .hero-card strong {
+      .hero-panel {
+        display: grid;
+        gap: 16px;
+        align-content: center;
+        padding: 24px;
+        border-radius: 30px;
+      }
+
+      .fact {
+        padding: 16px;
+        border: 1px solid rgba(12, 81, 59, 0.1);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.48);
+      }
+
+      .fact strong {
         display: block;
-        margin-bottom: 10px;
-        font-size: 18px;
+        margin-bottom: 5px;
+        font-size: 16px;
       }
 
-      .hero-card p {
-        margin: 0;
+      .fact span {
         color: var(--muted);
-        font-size: 15px;
-        line-height: 1.5;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .service-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-bottom: 20px;
+        padding: 14px;
+        border-radius: 22px;
+      }
+
+      .service-nav a,
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0 11px;
+        border-radius: var(--pill);
+        background: rgba(12, 81, 59, 0.08);
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
       }
 
       .service-grid {
@@ -199,36 +292,53 @@
       }
 
       .service-card {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
         min-height: 100%;
-        padding: clamp(22px, 3vw, 32px);
-        border: 1px solid rgba(12, 81, 59, 0.1);
+        padding: clamp(22px, 3vw, 30px);
         border-radius: var(--radius);
-        background: var(--paper);
-        box-shadow: var(--shadow);
-        backdrop-filter: blur(18px) saturate(145%);
-        -webkit-backdrop-filter: blur(18px) saturate(145%);
+        scroll-margin-top: 100px;
+      }
+
+      .service-head {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      .service-icon {
+        display: grid;
+        flex: 0 0 auto;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border: 1px solid rgba(12, 81, 59, 0.14);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.62);
+        color: var(--green);
       }
 
       .service-card h2 {
-        margin: 0 0 12px;
-        font-size: clamp(25px, 3vw, 34px);
-        line-height: 1.1;
+        margin: 0;
+        font-size: clamp(23px, 2.8vw, 31px);
+        line-height: 1.12;
       }
 
       .service-card p {
         margin: 0 0 16px;
         color: var(--muted);
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.58;
       }
 
       .service-card ul {
         display: grid;
-        gap: 9px;
+        gap: 8px;
         margin: 0;
         padding-left: 20px;
         color: var(--muted);
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.45;
       }
 
@@ -236,31 +346,41 @@
         color: var(--green);
       }
 
-      .service-card + .service-card {
-        scroll-margin-top: 92px;
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
       }
 
       .contact-strip {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
-        margin-top: 26px;
+        gap: 18px;
+        margin-top: 22px;
         padding: 24px;
         border-radius: var(--radius);
-        background: rgba(8, 51, 39, 0.88);
+        background: rgba(8, 51, 39, 0.9);
         color: #ffffff;
       }
 
       .contact-strip h2 {
-        margin: 0 0 5px;
-        font-size: 24px;
+        margin: 0 0 6px;
+        font-size: clamp(22px, 3vw, 30px);
       }
 
       .contact-strip p {
         margin: 0;
-        color: rgba(255, 255, 255, 0.74);
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .contact-strip .button {
+        background: #ffffff;
+        color: var(--green-deep);
+        box-shadow: none;
       }
 
       footer {
@@ -277,7 +397,12 @@
         gap: 12px;
       }
 
-      @media (max-width: 820px) {
+      .footer-inner a {
+        color: var(--green);
+        font-weight: 800;
+      }
+
+      @media (max-width: 860px) {
         .nav {
           align-items: flex-start;
           flex-direction: column;
@@ -290,25 +415,48 @@
         }
 
         main {
-          padding-top: 38px;
+          padding-top: 34px;
+        }
+
+        .hero-panel {
+          align-content: start;
+        }
+
+        .contact-strip {
+          align-items: flex-start;
+          flex-direction: column;
         }
       }
 
-      @media (max-width: 460px) {
+      @media (max-width: 520px) {
         .nav,
         main,
         .footer-inner {
           width: min(calc(100% - 24px), var(--max));
         }
 
+        .brand span:last-child {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .nav-actions,
+        .hero-actions,
+        .button,
+        .button-outline {
+          width: 100%;
+        }
+
         h1 {
           font-size: 38px;
         }
 
-        .nav-actions,
-        .button,
-        .button-outline {
-          width: 100%;
+        .hero-copy,
+        .hero-panel,
+        .service-card,
+        .contact-strip {
+          border-radius: 20px;
         }
       }
     </style>
@@ -322,102 +470,176 @@
         </a>
         <div class="nav-actions">
           <a class="button-outline" href="../#sluzby">Zpět na služby</a>
-          <a class="button" href="tel:+420777832015">Zavolat +420&nbsp;777&nbsp;832&nbsp;015</a>
+          <a class="button" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <div>
-          <span class="eyebrow">Detail služeb</span>
-          <h1>Autoservis pro Nový Bor, Českou Lípu a okolí</h1>
-          <p class="lead">Přehled nejčastějších služeb, které řešíme v Janově u Nového Boru. Detailní obsah je oddělený od hlavní stránky, aby homepage zůstala přehledná.</p>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <span class="eyebrow">Přehled služeb</span>
+          <h1 id="page-title">Servisní práce pro osobní i dodávkové vozy</h1>
+          <p class="lead">V Janově u Nového Boru řešíme běžný servis, pneuservis, diagnostiku, klimatizace i přípravu na STK. Rozsah práce a cenu vždy upřesňujeme podle konkrétního auta.</p>
+          <div class="hero-actions">
+            <a class="button" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
+            <a class="button-outline" href="../#kontakt">Kontakt a adresa</a>
+          </div>
         </div>
-        <aside class="hero-card">
-          <strong>Termín nejrychleji upřesníme telefonicky</strong>
-          <p>Při hovoru si ujasníme typ vozu, požadovaný servis, rozsah opravy a vhodný čas návštěvy.</p>
+        <aside class="hero-panel" aria-label="Rychlé informace">
+          <div class="fact"><strong>Nejrychlejší domluva</strong><span>Telefonicky nebo osobně v servisu. Formuláře a dlouhé popisy nejsou potřeba.</span></div>
+          <div class="fact"><strong>Provozovna</strong><span>Janov 166, 473 01 Nový Bor. Po telefonické domluvě je možný i jiný čas.</span></div>
+          <div class="fact"><strong>Specializace</strong><span>Často pracujeme s vozy VW Group a Opel, běžně ale servisujeme všechny značky.</span></div>
         </aside>
       </section>
 
-      <section class="service-grid" aria-label="Detailní popis služeb">
-        <article class="service-card" id="autoservis-novy-bor">
-          <h2>Autoservis Nový Bor</h2>
-          <p>Hledáte autoservis u Nového Boru pro běžnou údržbu nebo opravu vozu? V Janově řešíme pravidelné servisní prohlídky, výměny oleje a filtrů, brzdy, podvozky, baterie, rozvody i další mechanické opravy osobních a dodávkových vozů.</p>
-          <ul>
-            <li>mechanické opravy motoru, brzd, podvozku a převodovky</li>
-            <li>pravidelný servis, oleje Castrol a servisní intervaly</li>
-            <li>postup opravy podle stavu konkrétního auta</li>
-          </ul>
-        </article>
+      <nav class="service-nav" aria-label="Rychlý přechod na službu">
+        <a href="#autoservis">Autoservis</a>
+        <a href="#pneuservis">Pneuservis</a>
+        <a href="#diagnostika">Diagnostika</a>
+        <a href="#klimatizace">Klimatizace</a>
+        <a href="#stk">Příprava na STK</a>
+        <a href="#geometrie">Geometrie</a>
+        <a href="#karoserie">Karoserie</a>
+        <a href="#odtah">Odtah a import</a>
+      </nav>
 
-        <article class="service-card" id="autoservis-ceska-lipa">
-          <h2>Autoservis Česká Lípa</h2>
-          <p>Řidiči z České Lípy a Českolipska k nám jezdí hlavně kvůli osobnímu přístupu a srozumitelnému vysvětlení opravy. Nejdřív zkontrolujeme stav vozu, podle potřeby doplníme diagnostiku a potom upřesníme rozsah prací i orientační cenu.</p>
-          <ul>
-            <li>servis osobních i dodávkových vozů</li>
-            <li>specializace na VW Group a Opel</li>
-            <li>opravy bez zbytečných prací navíc</li>
-          </ul>
+      <section class="service-grid" aria-label="Detailní popis služeb">
+        <article class="service-card" id="autoservis">
+          <div class="service-head">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></svg></span>
+            <h2>Běžný servis a opravy</h2>
+          </div>
+          <div>
+            <p>Pravidelná údržba, opravy motoru, brzd, podvozku a převodovky. Postup domlouváme podle stavu vozu, dostupnosti dílů a toho, co má pro opravu skutečný smysl.</p>
+            <ul>
+              <li>výměna oleje, filtrů, kapalin a baterie</li>
+              <li>brzdy, podvozkové díly, rozvody a běžné mechanické závady</li>
+              <li>servis osobních i dodávkových vozů</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">VW Group</span><span class="tag">Opel</span><span class="tag">Všechny značky</span></div>
         </article>
 
         <article class="service-card" id="pneuservis">
-          <h2>Pneuservis Nový Bor a Česká Lípa</h2>
-          <p>Pneuservis zajišťujeme pro sezónní přezutí letních a zimních pneumatik, montáž a vyvážení kol, kontrolu stavu pneumatik i opravy defektů. Podle potřeby poradíme s výběrem vhodného obutí a prověříme stav ráfků.</p>
-          <ul>
-            <li>přezouvání pneu, vyvažování kol a kontrola tlaku</li>
-            <li>opravy propíchnutých pneumatik a TPMS kontrola</li>
-            <li>prodej pneumatik, ALU a ocelových disků</li>
-          </ul>
+          <div class="service-head">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4M6.4 6.4l2.8 2.8M14.8 14.8l2.8 2.8M17.6 6.4l-2.8 2.8M9.2 14.8l-2.8 2.8"/></svg></span>
+            <h2>Pneuservis</h2>
+          </div>
+          <div>
+            <p>Sezónní přezutí, montáž a vyvážení kol, kontrola stavu pneumatik i opravy defektů. Podle potřeby poradíme s výběrem vhodného obutí.</p>
+            <ul>
+              <li>přezouvání letních a zimních pneumatik</li>
+              <li>vyvažování kol, kontrola tlaku a stavu ráfků</li>
+              <li>prodej pneumatik, ALU a ocelových disků</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Přezutí</span><span class="tag">Vyvážení</span><span class="tag">Defekty</span></div>
         </article>
 
         <article class="service-card" id="diagnostika">
-          <h2>Diagnostika vozidel</h2>
-          <p>Elektronická diagnostika pomůže rychleji určit příčinu závady a zvolit správný servisní postup. Čteme chybové kódy, kontrolujeme řídicí jednotky, mažeme servisní intervaly a u vybraných vozů řešíme návaznost na digitální servisní knížku VW Group.</p>
-          <ul>
-            <li>OBD diagnostika, čtení a mazání chyb</li>
-            <li>servisní reset a kontrola elektroniky</li>
-            <li>doporučení dalšího postupu před opravou</li>
-          </ul>
+          <div class="service-head">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 12h4"/></svg></span>
+            <h2>Diagnostika vozidel</h2>
+          </div>
+          <div>
+            <p>Elektronická diagnostika pomůže určit příčinu závady a zvolit správný postup opravy. U vybraných vozů řešíme také návaznost na digitální servisní knížku VW Group.</p>
+            <ul>
+              <li>čtení a mazání chybových kódů</li>
+              <li>servisní reset a kontrola elektroniky</li>
+              <li>doporučení dalšího postupu před opravou</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">OBD</span><span class="tag">Servisní interval</span><span class="tag">VW servisní knížka</span></div>
         </article>
 
-        <article class="service-card" id="klimatizace-stk">
-          <h2>Klimatizace a příprava na STK</h2>
-          <p>U klimatizace řešíme kontrolu funkce, plnění chladiva, čištění a dezinfekci systému. Před technickou kontrolou projdeme základní části vozu, upozorníme na závady a upřesníme opravy, které dávají smysl před návštěvou STK.</p>
-          <ul>
-            <li>plnění, čištění a dezinfekce klimatizace</li>
-            <li>kontrola brzd, podvozku, světel a provozních kapalin</li>
-            <li>příprava na STK a emise podle stavu vozu</li>
-          </ul>
+        <article class="service-card" id="klimatizace">
+          <div class="service-head">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M4.2 6.1l15.6 11.8M19.8 6.1 4.2 17.9"/><path d="M8.4 4.5 12 8l3.6-3.5M8.4 19.5 12 16l3.6 3.5M3.4 10.1 8 12l-4.6 1.9M20.6 10.1 16 12l4.6 1.9"/></svg></span>
+            <h2>Klimatizace</h2>
+          </div>
+          <div>
+            <p>Kontrola funkce klimatizace, plnění chladiva, čištění a dezinfekce systému. Pomůžeme obnovit výkon chlazení a odstranit nepříjemné pachy.</p>
+            <ul>
+              <li>plnění chladiva podle typu systému</li>
+              <li>čištění a dezinfekce klimatizace</li>
+              <li>kontrola funkce před letní sezonou</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Plnění</span><span class="tag">Čištění</span><span class="tag">Dezinfekce</span></div>
+        </article>
+
+        <article class="service-card" id="stk">
+          <div class="service-head">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-5"/></svg></span>
+            <h2>Příprava na STK</h2>
+          </div>
+          <div>
+            <p>Před technickou kontrolou projdeme důležité části vozu a upozorníme na závady, které by mohly způsobit problém. Opravy řešíme po domluvě podle stavu auta.</p>
+            <ul>
+              <li>kontrola brzd, podvozku, světel a kapalin</li>
+              <li>diagnostika a servisní reset podle potřeby</li>
+              <li>doporučení postupu před návštěvou STK</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Kontrola</span><span class="tag">Poradenství</span><span class="tag">Opravy po domluvě</span></div>
         </article>
 
         <article class="service-card" id="geometrie">
-          <h2>Geometrie kol</h2>
-          <p>Geometrii kol řešíme typicky po zásahu do podvozku, při nerovnoměrném sjíždění pneumatik nebo když auto táhne ke straně. Nejdřív ověříme stav vozu a podle situace doporučíme vhodný postup.</p>
-          <ul>
-            <li>kontrola podvozku před nastavením geometrie</li>
-            <li>řešení nerovnoměrného sjíždění pneumatik</li>
-            <li>návaznost na pneuservis a opravy podvozku</li>
-          </ul>
+          <div class="service-head">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 16a3 3 0 1 0 6 0 3 3 0 0 0-6 0ZM13 16a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"/><path d="M8 13V7h8v6M4 7h16M12 7V4"/></svg></span>
+            <h2>Geometrie kol</h2>
+          </div>
+          <div>
+            <p>Geometrii kol řešíme při nerovnoměrném sjíždění pneumatik, po zásahu do podvozku nebo když auto táhne ke straně. Nejdřív ověříme, zda není potřeba oprava podvozku.</p>
+            <ul>
+              <li>kontrola podvozku před nastavením geometrie</li>
+              <li>řešení nerovnoměrného sjíždění pneumatik</li>
+              <li>návaznost na pneuservis a opravy podvozku</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Podvozek</span><span class="tag">Pneumatiky</span><span class="tag">Stabilita vozu</span></div>
         </article>
 
-        <article class="service-card" id="odtah-prodej-import">
-          <h2>Odtah vozů, prodej vozů a import z Německa</h2>
-          <p>Pomůžeme také s odtahem vozů, prodejem vybraných aut a importem vozů z Německa. U dovezeného auta umíme navázat kontrolou stavu a běžným servisem.</p>
-          <ul>
-            <li>odtah vozů podle aktuálních možností</li>
-            <li>prodej vozů a pomoc s výběrem vhodného auta</li>
-            <li>import vozů z Německa včetně následné servisní kontroly</li>
-          </ul>
+        <article class="service-card" id="karoserie">
+          <div class="service-head">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 4 4 15l5 5L20 9Z"/><path d="M14 5l5 5"/><path d="M4 15l-1 6 6-1"/></svg></span>
+            <h2>Karosářské práce</h2>
+          </div>
+          <div>
+            <p>Menší karosářské opravy, korozní práce a lakování řešíme podle rozsahu po kontrole vozu. U větších zásahů spolupracujeme s ověřenými partnery v regionu.</p>
+            <ul>
+              <li>lokální opravy karoserie a plechů</li>
+              <li>opravy koroze a ochrana proti korozi</li>
+              <li>lakování podle domluvy a rozsahu práce</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Plechy</span><span class="tag">Lakování</span><span class="tag">Antikoroze</span></div>
+        </article>
+
+        <article class="service-card" id="odtah">
+          <div class="service-head">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 17h18l-2-6H5l-2 6Z"/><path d="M6 17a2 2 0 1 0 4 0"/><path d="M14 17a2 2 0 1 0 4 0"/><path d="M7 11l2-4h6l2 4"/><path d="M3 21h18"/></svg></span>
+            <h2>Odtah, prodej a import vozů</h2>
+          </div>
+          <div>
+            <p>Po domluvě pomůžeme s odtahem vozu, prodejem vybraných aut nebo importem vozů z Německa. U dovezeného auta umíme navázat kontrolou stavu a základním servisem.</p>
+            <ul>
+              <li>odtah vozů podle aktuálních možností</li>
+              <li>pomoc s výběrem a prodejem vozů</li>
+              <li>import z Německa a následná servisní kontrola</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Odtah</span><span class="tag">Prodej</span><span class="tag">Import</span></div>
         </article>
       </section>
 
       <section class="contact-strip" aria-label="Kontakt">
         <div>
-          <h2>Chcete upřesnit servis?</h2>
-          <p>Zavolejte, nebo se zastavte v servisu v Janově u Nového Boru.</p>
+          <h2>Potřebujete domluvit termín?</h2>
+          <p>Zavolejte na +420 777 832 015, nebo se zastavte v servisu v Janově u Nového Boru.</p>
         </div>
-        <a class="button" href="tel:+420777832015">Zavolat +420&nbsp;777&nbsp;832&nbsp;015</a>
+        <a class="button" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
       </section>
     </main>
 
