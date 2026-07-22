@@ -456,20 +456,46 @@
       }
 
       .service-strip-inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 8px;
+        overflow: hidden;
         width: 100%;
         margin: 0;
         padding: 0;
-        overflow-x: visible;
-        overflow-y: hidden;
         scrollbar-width: none;
+      }
+
+      .service-strip-track {
+        display: flex;
+        width: max-content;
+        animation: serviceMarquee 42s linear infinite;
+      }
+
+      .service-strip-inner:hover .service-strip-track,
+      .service-strip-inner:focus-within .service-strip-track {
+        animation-play-state: paused;
+      }
+
+      .service-strip-set {
+        display: flex;
+        flex: 0 0 auto;
+        gap: 8px;
+        padding-right: 8px;
+      }
+
+      .service-strip-set .chip {
+        flex: 0 0 auto;
       }
 
       .service-strip-inner::-webkit-scrollbar {
         display: none;
+      }
+
+      @keyframes serviceMarquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
       }
 
       .chip {
@@ -1009,6 +1035,14 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
+        .service-strip-inner {
+          overflow-x: auto;
+        }
+
+        .service-strip-track {
+          animation: none;
+        }
+
         .brand-tile,
         .brand-mark,
         .brand-mark img {
@@ -2114,11 +2148,8 @@
         }
 
         .service-strip-inner {
-          flex-wrap: nowrap;
-          gap: 10px;
           max-height: none;
-          overflow-x: auto;
-          scroll-snap-type: x proximity;
+          overflow: hidden;
           scrollbar-width: none;
         }
 
@@ -2131,10 +2162,6 @@
           min-height: 44px;
           padding: 0 16px;
           font-size: 16px;
-        }
-
-        .service-overview .chip {
-          scroll-snap-align: start;
         }
 
         section {
@@ -2611,19 +2638,38 @@
       <section id="sluzby">
         <div class="service-overview" aria-label="Rychlý přehled služeb">
           <div class="service-strip-inner">
-            <a class="chip" href="autoservis-novy-bor/">Autoservis</a>
-            <a class="chip" href="pneuservis-novy-bor/">Pneuservis</a>
-            <a class="chip" href="diagnostika-vozidel/">Diagnostika</a>
-            <a class="chip" href="servis-klimatizace/">Klimatizace</a>
-            <a class="chip" href="#sluzby">Brzdy</a>
-            <a class="chip" href="#sluzby">Oleje</a>
-            <a class="chip" href="priprava-na-stk/">Příprava na STK</a>
-            <a class="chip" href="geometrie-kol/">Geometrie</a>
-            <a class="chip" href="sluzby/#karoserie">Karosářské práce</a>
-            <a class="chip" href="sluzby/#odtah">Odtah vozů</a>
-            <a class="chip" href="sluzby/#odtah">Prodej vozů</a>
-            <a class="chip" href="sluzby/#odtah">Dovoz vozů z Německa</a>
-            <a class="chip" href="#kontakt">Náhradní vůz</a>
+            <div class="service-strip-track">
+              <div class="service-strip-set">
+                <a class="chip" href="autoservis-novy-bor/">Autoservis</a>
+                <a class="chip" href="pneuservis-novy-bor/">Pneuservis</a>
+                <a class="chip" href="diagnostika-vozidel/">Diagnostika</a>
+                <a class="chip" href="servis-klimatizace/">Klimatizace</a>
+                <a class="chip" href="#sluzby">Brzdy</a>
+                <a class="chip" href="#sluzby">Oleje</a>
+                <a class="chip" href="priprava-na-stk/">Příprava na STK</a>
+                <a class="chip" href="geometrie-kol/">Geometrie</a>
+                <a class="chip" href="sluzby/#karoserie">Karosářské práce</a>
+                <a class="chip" href="sluzby/#odtah">Odtah vozů</a>
+                <a class="chip" href="sluzby/#odtah">Prodej vozů</a>
+                <a class="chip" href="sluzby/#odtah">Dovoz vozů z Německa</a>
+                <a class="chip" href="#kontakt">Náhradní vůz</a>
+              </div>
+              <div class="service-strip-set" aria-hidden="true">
+                <a class="chip" href="autoservis-novy-bor/" tabindex="-1">Autoservis</a>
+                <a class="chip" href="pneuservis-novy-bor/" tabindex="-1">Pneuservis</a>
+                <a class="chip" href="diagnostika-vozidel/" tabindex="-1">Diagnostika</a>
+                <a class="chip" href="servis-klimatizace/" tabindex="-1">Klimatizace</a>
+                <a class="chip" href="#sluzby" tabindex="-1">Brzdy</a>
+                <a class="chip" href="#sluzby" tabindex="-1">Oleje</a>
+                <a class="chip" href="priprava-na-stk/" tabindex="-1">Příprava na STK</a>
+                <a class="chip" href="geometrie-kol/" tabindex="-1">Geometrie</a>
+                <a class="chip" href="sluzby/#karoserie" tabindex="-1">Karosářské práce</a>
+                <a class="chip" href="sluzby/#odtah" tabindex="-1">Odtah vozů</a>
+                <a class="chip" href="sluzby/#odtah" tabindex="-1">Prodej vozů</a>
+                <a class="chip" href="sluzby/#odtah" tabindex="-1">Dovoz vozů z Německa</a>
+                <a class="chip" href="#kontakt" tabindex="-1">Náhradní vůz</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="section-head">
