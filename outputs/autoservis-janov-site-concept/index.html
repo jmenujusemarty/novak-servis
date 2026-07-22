@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Autoservis Janov | Autoservis Nový Bor a Česká Lípa</title>
-    <meta name="description" content="Autoservis Janov u Nového Boru: opravy aut, pneuservis, diagnostika, klimatizace, geometrie a příprava na STK pro Nový Bor a Českou Lípu.">
+    <title>Autoservis Janov u Nového Boru | Servis aut, pneuservis a diagnostika</title>
+    <meta name="description" content="Autoservis Janov u Nového Boru: servis aut, pneuservis, diagnostika vozidel, klimatizace a příprava na STK pro Nový Bor, Českou Lípu a okolí.">
     <meta name="robots" content="index,follow,max-snippet:160">
     <meta name="google-site-verification" content="3fx-0OxVX174_saiDblWYC7OhIOBFIh-AokVf8D31rs">
     <meta name="author" content="Autoservis Janov">
@@ -32,7 +32,7 @@
         "url": "https://www.autoservisjanov.cz/",
         "image": "https://www.autoservisjanov.cz/assets/exterior.jpg",
         "logo": "https://www.autoservisjanov.cz/assets/logo-autoservis-janov.svg",
-        "description": "Spolehlivý autoservis s odborným přístupem pro běžný servis, diagnostiku, pneuservis, klimatizaci, brzdy, přípravu na STK a další opravy pro Nový Bor, Českou Lípu a okolí.",
+        "description": "Autoservis Janov u Nového Boru pro servis aut, pneuservis, diagnostiku vozidel, klimatizaci, brzdy, přípravu na STK a další opravy pro Nový Bor, Českou Lípu a okolí.",
         "telephone": "+420777832015",
         "email": "info@autoservisjanov.cz",
         "hasMap": "https://maps.app.goo.gl/hzoNh6EBdeUgtRS58",
@@ -243,13 +243,12 @@
         }
 
         .js-animate .reveal {
-          opacity: 0;
-          transform: translateY(22px);
+          opacity: 1;
+          transform: none;
           transition:
-            opacity 640ms ease,
-            transform 720ms cubic-bezier(0.16, 1, 0.3, 1);
+            opacity 180ms ease,
+            transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
           transition-delay: var(--reveal-delay, 0ms);
-          will-change: opacity, transform;
         }
 
         .js-animate .reveal.is-visible {
@@ -525,7 +524,7 @@
         gap: clamp(40px, 5.4vw, 76px);
         align-items: center;
         min-height: 0;
-        padding: clamp(58px, 6.8vw, 88px) 0 clamp(68px, 7vw, 94px);
+        padding: clamp(48px, 6vw, 78px) 0 clamp(40px, 5vw, 68px);
       }
 
       h1,
@@ -909,6 +908,52 @@
         height: 6px;
       }
 
+      .secondary-services {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        gap: 18px;
+        align-items: center;
+        margin-top: 22px;
+        padding: clamp(22px, 3vw, 30px);
+        border: 1px solid var(--glass-border);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.62);
+        box-shadow: var(--glass-shadow);
+        backdrop-filter: blur(18px) saturate(145%);
+        -webkit-backdrop-filter: blur(18px) saturate(145%);
+      }
+
+      .secondary-services h3 {
+        margin-bottom: 8px;
+      }
+
+      .secondary-services p {
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .secondary-service-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-end;
+      }
+
+      .secondary-service-links a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 0 14px;
+        border: 1px solid rgba(12, 81, 59, 0.16);
+        border-radius: var(--radius-pill);
+        background: rgba(237, 244, 241, 0.72);
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 760;
+        text-decoration: none;
+      }
+
       .dark-band {
         overflow: hidden;
         padding: clamp(28px, 3.2vw, 42px);
@@ -1276,9 +1321,9 @@
 
       .contact-summary {
         padding: 28px;
-        border: 1px solid var(--glass-border);
+        border: 1px solid rgba(12, 81, 59, 0.2);
         border-radius: var(--radius);
-        background: var(--paper);
+        background: rgba(255, 255, 255, 0.82);
         box-shadow: var(--glass-shadow);
         backdrop-filter: blur(18px) saturate(145%);
         -webkit-backdrop-filter: blur(18px) saturate(145%);
@@ -1356,9 +1401,9 @@
 
       .contact-preference {
         padding: 28px;
-        border: 1px solid rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(12, 81, 59, 0.16);
         border-radius: var(--radius);
-        background: rgba(237, 244, 241, 0.58);
+        background: rgba(255, 255, 255, 0.76);
         box-shadow: var(--glass-shadow);
         backdrop-filter: blur(18px) saturate(145%);
         -webkit-backdrop-filter: blur(18px) saturate(145%);
@@ -1402,7 +1447,7 @@
 
       .contact-item span,
       .contact-item a {
-        color: var(--muted);
+        color: var(--green-2);
         font-size: 15px;
       }
 
@@ -2233,6 +2278,16 @@
           grid-template-columns: 1fr;
         }
 
+        .secondary-services {
+          grid-template-columns: 1fr;
+          gap: 18px;
+          padding: 20px;
+        }
+
+        .secondary-service-links {
+          justify-content: flex-start;
+        }
+
         .contact-summary,
         .contact-preference {
           padding: 20px;
@@ -2569,7 +2624,7 @@
     <main class="page">
       <section class="hero" id="uvod">
         <div>
-          <h1>Spolehlivý autoservis s odborným přístupem</h1>
+          <h1>Autoservis Janov u Nového Boru</h1>
           <figure class="hero-media hero-mobile-media">
             <picture>
               <source type="image/avif" srcset="assets/exterior-800.avif 800w, assets/exterior-1200.avif 1200w" sizes="100vw">
@@ -2577,7 +2632,7 @@
             </picture>
             <figcaption class="media-note"><strong>Autoservis Janov</strong><a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, Nový Bor. Zavolejte nebo se zastavte v otevírací době.</a></figcaption>
           </figure>
-          <p class="lead">Servis, diagnostika, pneuservis a příprava na STK pro osobní i dodávkové vozy z Nového Boru, České Lípy a okolí.</p>
+          <p class="lead">Servis, diagnostika vozidel, pneuservis, klimatizace a příprava na STK pro osobní i dodávkové vozy z Nového Boru, České Lípy a okolí.</p>
           <div class="hero-meta" aria-label="Zkušenosti autoservisu">
             <span>27+ let zkušeností</span>
             <span>Specializace na Opel a koncern VW</span>
@@ -2596,7 +2651,7 @@
             </div>
             <div class="fact">
               <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M12 7v6l4 2"/></svg>
-              <div><strong>Po-Pá 8:15-11:00 / 12:00-16:30</strong><span>Pro domluvu termínu nebo konzultaci servisu nás kontaktujte telefonicky, případně se zastavte osobně v našem servisu.</span></div>
+              <div><strong>Po-Pá 8:15-11:00 / 12:00-16:30</strong><span>Termín nejlépe domluvíme telefonicky. Pokud jste poblíž, můžete se zastavit osobně v otevírací době.</span></div>
             </div>
           </div>
         </div>
@@ -2612,25 +2667,25 @@
       <section id="sluzby">
         <div class="service-overview" aria-label="Rychlý přehled služeb">
           <div class="service-strip-inner">
-            <a class="chip" href="#sluzby">Autoservis</a>
-            <a class="chip" href="#sluzby">Pneuservis</a>
-            <a class="chip" href="#sluzby">Diagnostika</a>
-            <a class="chip" href="#sluzby">Klimatizace</a>
+            <a class="chip" href="autoservis-novy-bor/">Autoservis</a>
+            <a class="chip" href="pneuservis-novy-bor/">Pneuservis</a>
+            <a class="chip" href="diagnostika-vozidel/">Diagnostika</a>
+            <a class="chip" href="servis-klimatizace/">Klimatizace</a>
             <a class="chip" href="#sluzby">Brzdy</a>
             <a class="chip" href="#sluzby">Oleje</a>
-            <a class="chip" href="#sluzby">Příprava na STK</a>
-            <a class="chip" href="#sluzby">Geometrie</a>
-            <a class="chip" href="#sluzby">Karosářské práce</a>
-            <a class="chip" href="#sluzby">Odtah vozů</a>
-            <a class="chip" href="#sluzby">Prodej vozů</a>
-            <a class="chip" href="#sluzby">Dovoz vozů z Německa</a>
+            <a class="chip" href="priprava-na-stk/">Příprava na STK</a>
+            <a class="chip" href="geometrie-kol/">Geometrie</a>
+            <a class="chip" href="sluzby/#karoserie">Karosářské práce</a>
+            <a class="chip" href="sluzby/#odtah">Odtah vozů</a>
+            <a class="chip" href="sluzby/#odtah">Prodej vozů</a>
+            <a class="chip" href="sluzby/#odtah">Dovoz vozů z Německa</a>
             <a class="chip" href="#kontakt">Náhradní vůz</a>
           </div>
         </div>
         <div class="section-head">
           <div>
             <h2>Služby</h2>
-            <p>Nejčastější servisní práce řešíme přímo v dílně v Janově u Nového Boru. Pomáháme řidičům z Nového Boru, České Lípy a okolních obcí.</p>
+            <p>Nejčastější servisní práce řešíme přímo v dílně v Janově. Pokud si nejste jistí závadou, zavolejte - domluvíme první kontrolu a další postup.</p>
           </div>
         </div>
         <div class="grid-3">
@@ -2670,33 +2725,19 @@
               <p class="service-extra"><strong>+ další:</strong> kontrola funkce před letní sezonou.</p>
             </div>
           </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-            <div>
-              <div class="service-title-row"><h3>Příprava na STK</h3><span class="service-count">2 služby</span></div>
-              <p>Před technickou kontrolou projdeme důležité části vozu a upozorníme na věci, které by mohly při STK způsobit problém.</p>
-              <div class="chip-list"><span class="chip">Kompletní prohlídka</span><span class="chip">Poradenství</span><span class="chip">Geometrie</span></div>
-              <p class="service-extra"><strong>+ další:</strong> kontrola vozu před delší cestou.</p>
-            </div>
-          </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/></svg></div>
-            <div>
-              <div class="service-title-row"><h3>Karosářské práce</h3><span class="service-count">3 oblasti</span></div>
-              <p>Rozsah karosářské práce posoudíme podle stavu vozu. U větších zásahů spolupracujeme s ověřenými partnery v regionu.</p>
-              <div class="chip-list"><span class="chip">Opravy plechů</span><span class="chip">Lakování</span><span class="chip">Antikoroze</span></div>
-              <p class="service-extra"><strong>+ další:</strong> lokální opravy karoserie podle domluvy.</p>
-            </div>
-          </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18l-2-6H5l-2 6Z"/><path d="M6 17a2 2 0 1 0 4 0"/><path d="M14 17a2 2 0 1 0 4 0"/><path d="M7 11l2-4h6l2 4"/><path d="M3 21h18"/><path d="M18 4h3v3"/></svg></div>
-            <div>
-              <div class="service-title-row"><h3>Odtah, prodej a dovoz vozů z Německa</h3><span class="service-count">3 služby</span></div>
-              <p>Pomoc kolem vozu řešíme individuálně podle aktuálních možností, požadavku a stavu konkrétního auta.</p>
-              <div class="chip-list"><span class="chip">Odtah vozů</span><span class="chip">Prodej vozů</span><span class="chip">Dovoz vozů z Německa</span><span class="chip">Náhradní vůz</span></div>
-              <p class="service-extra"><strong>+ další:</strong> prověření vozu, domluva přepravy a základní servis po dovozu.</p>
-            </div>
-          </article>
+        </div>
+
+        <div class="secondary-services" aria-label="Další služby autoservisu">
+          <div>
+            <h3>Další služby po domluvě</h3>
+            <p>Příprava na STK, geometrie kol, karosářské práce, odtah vozů, prodej vozů, dovoz vozů z Německa a náhradní vůz řešíme podle aktuálních možností a stavu konkrétního auta.</p>
+          </div>
+          <div class="secondary-service-links">
+            <a href="priprava-na-stk/">Příprava na STK</a>
+            <a href="geometrie-kol/">Geometrie kol</a>
+            <a href="sluzby/#karoserie">Karosářské práce</a>
+            <a href="sluzby/#odtah">Odtah a dovoz</a>
+          </div>
         </div>
 
         <div class="service-detail-actions">
@@ -2709,7 +2750,7 @@
           <div class="specialty-layout">
             <div>
               <h2>Naše specializace</h2>
-              <p>Nejčastěji pracujeme s vozy koncernu VW a Opel. Díky opakované praxi rychleji řešíme běžný servis, diagnostiku i servisní záznamy.</p>
+              <p>Nejčastěji pracujeme s vozy Opel a koncernu VW. Díky opakované praxi rychleji řešíme běžný servis, diagnostiku, servisní intervaly i digitální servisní knížku VW Group.</p>
             </div>
             <div>
               <div class="specialty-grid" aria-label="Specializované značky">
@@ -2801,7 +2842,7 @@
         <div class="section-head">
           <div>
             <h2>Orientační ceník prací</h2>
-            <p>Základní úkony připravujeme jako orientační ceny od. Finální cenu potvrdíme podle typu vozu, rozsahu práce, použitého materiálu a stavu po kontrole.</p>
+            <p>Ceny jsou orientační. Finální cenu řekneme po kontrole vozu, podle rozsahu práce a použitých dílů.</p>
           </div>
           <a class="button price-cta" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
         </div>
@@ -2827,7 +2868,7 @@
         <div class="section-head">
           <div>
             <h2>Veřejné recenze zákazníků</h2>
-            <p>Zákazníci v recenzích oceňují hlavně ochotu, domluvu a odborný přístup.</p>
+            <p>Zákazníci oceňují hlavně férovou domluvu, ochotu, rychlé řešení a srozumitelné vysvětlení opravy.</p>
           </div>
           <div class="rating-summary"><span class="stars">★★★★★</span><span>4,6 / 45 hodnocení</span></div>
         </div>
@@ -2864,7 +2905,7 @@
               <div class="contact-item"><strong>Telefon:</strong> <a href="tel:+420777832015">+420&nbsp;777&nbsp;832&nbsp;015</a></div>
               <div class="contact-item"><strong>Adresa servisu:</strong> <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></div>
               <div class="contact-item"><strong>Provozní doba:</strong> <span>Pondělí-pátek 8:15-11:00 / 12:00-16:30</span><span>Sobota, neděle zavřeno</span></div>
-              <div class="contact-item"><strong>Termíny:</strong> <span>Pro domluvu termínu nebo konzultaci servisu nás kontaktujte telefonicky, případně se zastavte osobně v našem servisu.</span></div>
+              <div class="contact-item"><strong>Termíny:</strong> <span>Termín nejlépe domluvíme telefonicky. Pokud jste poblíž, můžete se zastavit osobně v otevírací době.</span></div>
               <div class="contact-item"><strong>Odpovědný vedoucí:</strong> <a href="tel:+420777832015">Martin Novák +420&nbsp;777&nbsp;832&nbsp;015</a></div>
             </div>
           </aside>
@@ -2934,7 +2975,7 @@
             <span>Autoservis Janov</span>
           </div>
           <h2>Autoservis Janov</h2>
-          <p>Spolehlivý autoservis s odborným přístupem pro běžný servis, diagnostiku, pneuservis a přípravu na STK pro Nový Bor, Českou Lípu a okolí.</p>
+          <p>Autoservis Janov u Nového Boru pro běžný servis, diagnostiku vozidel, pneuservis a přípravu na STK pro Nový Bor, Českou Lípu a okolí.</p>
         </div>
         <div data-nosnippet>
           <h3>Kontakt</h3>
@@ -2957,7 +2998,7 @@
             <li><strong>8:15-11:00 / 12:00-16:30</strong></li>
             <li>Sobota, neděle</li>
             <li><strong>Zavřeno</strong></li>
-            <li>Pro domluvu termínu nebo konzultaci servisu nás kontaktujte telefonicky, případně se zastavte osobně v našem servisu.</li>
+            <li>Termín nejlépe domluvíme telefonicky. Pokud jste poblíž, můžete se zastavit osobně v otevírací době.</li>
             <li>Odpovědný vedoucí: <a href="tel:+420777832015">Martin Novák +420&nbsp;777&nbsp;832&nbsp;015</a></li>
           </ul>
         </div>
@@ -2973,7 +3014,7 @@
       </div>
       <div class="footer-bottom">
         <span>Autoservis Janov, <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></span>
-        <span>Pro domluvu termínu nebo konzultaci servisu nás kontaktujte telefonicky, případně se zastavte osobně v našem servisu.</span>
+        <span>Termín nejlépe domluvíme telefonicky, případně osobně v servisu.</span>
       </div>
     </footer>
     <script>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Služby autoservisu | Autoservis Janov</title>
-    <meta name="description" content="Přehled služeb Autoservis Janov: běžný servis, pneuservis, diagnostika, klimatizace, brzdy, geometrie, příprava na STK, odtah a dovoz vozů z Německa.">
+    <title>Služby autoservisu Janov | Servis aut, pneuservis a diagnostika</title>
+    <meta name="description" content="Služby Autoservisu Janov u Nového Boru: servis aut, pneuservis, diagnostika vozidel, klimatizace, geometrie, příprava na STK, odtah a dovoz vozů z Německa.">
     <meta name="robots" content="index,follow">
     <meta name="google-site-verification" content="3fx-0OxVX174_saiDblWYC7OhIOBFIh-AokVf8D31rs">
     <link rel="canonical" href="https://www.autoservisjanov.cz/sluzby/">
@@ -50,6 +50,7 @@
         --muted: #63717b;
         --green: #0c513b;
         --green-deep: #07372b;
+        --orange: #f25b16;
         --line: rgba(12, 81, 59, 0.14);
         --soft: rgba(12, 81, 59, 0.08);
         --shadow: 0 20px 54px rgba(15, 23, 42, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.74);
@@ -70,7 +71,7 @@
         margin: 0;
         background: var(--bg);
         color: var(--ink);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
       }
 
@@ -160,9 +161,9 @@
       }
 
       .button {
-        background: var(--green);
+        background: var(--orange);
         color: #ffffff;
-        box-shadow: 0 12px 26px rgba(12, 81, 59, 0.18);
+        box-shadow: 0 16px 34px rgba(242, 91, 22, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.26);
       }
 
       .button-outline {
@@ -383,6 +384,50 @@
         box-shadow: none;
       }
 
+      .related-links {
+        display: grid;
+        gap: 14px;
+        margin-top: 22px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(20px) saturate(145%);
+        -webkit-backdrop-filter: blur(20px) saturate(145%);
+      }
+
+      .related-links h2 {
+        margin: 0;
+        font-size: clamp(22px, 2.8vw, 30px);
+      }
+
+      .related-links p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.48;
+      }
+
+      .related-link-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+      }
+
+      .related-link-list a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 12px;
+        border-radius: var(--pill);
+        background: var(--soft);
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
       footer {
         border-top: 1px solid var(--line);
         padding: 24px 0;
@@ -448,6 +493,17 @@
           width: 100%;
         }
 
+        .nav-actions {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .nav-actions .button,
+        .nav-actions .button-outline {
+          width: auto;
+          padding: 0 12px;
+        }
+
         h1 {
           font-size: 38px;
         }
@@ -469,7 +525,7 @@
           <span>Autoservis Janov</span>
         </a>
         <div class="nav-actions">
-          <a class="button-outline" href="../#sluzby">Zpět na služby</a>
+          <a class="button-outline" href="../#sluzby">Hlavní stránka</a>
           <a class="button" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
         </div>
       </nav>
@@ -479,15 +535,15 @@
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-copy">
           <span class="eyebrow">Přehled služeb</span>
-          <h1 id="page-title">Servisní práce pro osobní i dodávkové vozy</h1>
-          <p class="lead">V Janově u Nového Boru řešíme běžný servis, pneuservis, diagnostiku, klimatizace i přípravu na STK. Rozsah práce a cenu vždy upřesňujeme podle konkrétního auta.</p>
+          <h1 id="page-title">Služby autoservisu Janov</h1>
+          <p class="lead">V Janově u Nového Boru řešíme běžný servis, pneuservis, diagnostiku vozidel, klimatizaci i přípravu na STK. Rozsah práce a cenu vždy upřesňujeme podle konkrétního auta.</p>
           <div class="hero-actions">
             <a class="button" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
             <a class="button-outline" href="../#kontakt">Kontakt a adresa</a>
           </div>
         </div>
         <aside class="hero-panel" aria-label="Rychlé informace">
-          <div class="fact"><strong>Provozovna</strong><span>Janov 166, 473 01 Nový Bor. Po telefonické domluvě je možný i jiný čas.</span></div>
+          <div class="fact"><strong>Provozovna</strong><span><a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473 01 Nový Bor</a>. Po telefonické domluvě je možný i jiný čas.</span></div>
           <div class="fact"><strong>Specializace</strong><span>Často pracujeme s vozy VW Group a Opel, běžně ale servisujeme všechny značky.</span></div>
         </aside>
       </section>
@@ -633,10 +689,26 @@
         </article>
       </section>
 
+      <section class="related-links" aria-labelledby="related-title">
+        <div>
+          <h2 id="related-title">Nejčastěji hledané služby</h2>
+          <p>Pro rychlejší orientaci máme samostatné stránky pro hlavní služby a lokality v okolí Nového Boru a České Lípy.</p>
+        </div>
+        <div class="related-link-list">
+          <a href="../autoservis-novy-bor/">Autoservis Nový Bor</a>
+          <a href="../autoservis-ceska-lipa/">Autoservis Česká Lípa</a>
+          <a href="../pneuservis-novy-bor/">Pneuservis Nový Bor</a>
+          <a href="../diagnostika-vozidel/">Diagnostika vozidel</a>
+          <a href="../priprava-na-stk/">Příprava na STK</a>
+          <a href="../servis-klimatizace/">Servis klimatizace</a>
+          <a href="../geometrie-kol/">Geometrie kol</a>
+        </div>
+      </section>
+
       <section class="contact-strip" aria-label="Kontakt">
         <div>
           <h2>Potřebujete domluvit termín?</h2>
-          <p>Zavolejte na +420 777 832 015, nebo se zastavte v servisu v Janově u Nového Boru.</p>
+          <p>Termín nejlépe domluvíme telefonicky na +420 777 832 015, případně osobně v servisu na adrese <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, Nový Bor</a>.</p>
         </div>
         <a class="button" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
       </section>
