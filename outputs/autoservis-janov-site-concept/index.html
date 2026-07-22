@@ -569,6 +569,17 @@
         letter-spacing: 0;
       }
 
+      .hero-title-line {
+        display: block;
+      }
+
+      @media (min-width: 1025px) {
+        .hero h1 {
+          font-size: clamp(58px, 4.45vw, 66px);
+          line-height: 1.03;
+        }
+      }
+
       h2 {
         margin-bottom: 16px;
         font-size: clamp(34px, 4vw, 54px);
@@ -2196,6 +2207,10 @@
           line-height: 1.03;
         }
 
+        .hero-title-line {
+          display: inline;
+        }
+
         p,
         .lead {
           font-size: 16px;
@@ -2663,7 +2678,7 @@
     <main class="page">
       <section class="hero" id="uvod">
         <div>
-          <h1>Autoservis, kde autům rozumíme</h1>
+          <h1><span class="hero-title-line">Autoservis, kde</span> <span class="hero-title-line">autům rozumíme</span></h1>
           <figure class="hero-media hero-mobile-media">
             <picture>
               <source type="image/avif" srcset="assets/exterior-800.avif 800w, assets/exterior-1200.avif 1200w" sizes="100vw">
