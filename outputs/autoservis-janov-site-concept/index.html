@@ -458,12 +458,13 @@
 
       .service-strip-inner {
         display: flex;
-        flex-wrap: nowrap;
-        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 8px;
         width: 100%;
         margin: 0;
         padding: 0;
-        overflow-x: auto;
+        overflow-x: visible;
         overflow-y: hidden;
         scrollbar-width: none;
       }
@@ -891,21 +892,21 @@
       }
 
       .service-overview .chip {
-        flex: 1 1 auto;
-        gap: 8px;
+        flex: 0 1 auto;
+        gap: 7px;
         justify-content: center;
         min-width: 0;
-        min-height: 42px;
-        padding: 0 9px;
-        font-size: clamp(11px, 0.72vw, 13px);
-        font-weight: 640;
+        min-height: 40px;
+        padding: 0 12px;
+        font-size: 13px;
+        font-weight: 700;
         letter-spacing: 0;
       }
 
       .service-overview .chip::before {
-        flex: 0 0 7px;
-        width: 7px;
-        height: 7px;
+        flex: 0 0 6px;
+        width: 6px;
+        height: 6px;
       }
 
       .dark-band {
