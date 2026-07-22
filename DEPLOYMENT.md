@@ -35,6 +35,8 @@ Required DNS:
 ```text
 autoservisjanov.cz      A   204.168.158.92
 www.autoservisjanov.cz  A   204.168.158.92
+autoservisjanov.cz      AAAA 2a01:4f9:c014:56c0::1
+www.autoservisjanov.cz  AAAA 2a01:4f9:c014:56c0::1
 ```
 
-Remove the old `167.235.121.166` A records after the hosting migration. Caddy can issue the HTTPS certificate only after both hostnames resolve to the Hetzner server.
+Remove the old `167.235.121.166` A records and the old `2a01:4f8:1061:21da::2` AAAA records after the hosting migration. Caddy can issue the HTTPS certificate only after both hostnames resolve to the Hetzner server.
