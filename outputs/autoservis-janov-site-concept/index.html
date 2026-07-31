@@ -15,13 +15,13 @@
     <meta property="og:locale" content="cs_CZ">
     <meta property="og:site_name" content="Autoservis Janov">
     <meta property="og:title" content="Autoservis Janov | Autoservis Nový Bor a Česká Lípa">
-    <meta property="og:description" content="Opravy aut, pneuservis, diagnostika, klimatizace, geometrie a příprava na STK v Janově u Nového Boru pro Nový Bor a Českou Lípu.">
+    <meta property="og:description" content="Opravy aut, pneuservis, diagnostika, klimatizace a příprava na STK v Janově u Nového Boru pro Nový Bor a Českou Lípu.">
     <meta property="og:url" content="https://www.autoservisjanov.cz/">
     <meta property="og:image" content="https://www.autoservisjanov.cz/assets/exterior.jpg">
     <meta property="og:image:alt" content="Exteriér autoservisu Autoservis Janov">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Autoservis Janov | Autoservis Nový Bor a Česká Lípa">
-    <meta name="twitter:description" content="Opravy aut, pneuservis, diagnostika, klimatizace, geometrie a příprava na STK pro Nový Bor, Českou Lípu a okolí.">
+    <meta name="twitter:description" content="Opravy aut, pneuservis, diagnostika, klimatizace a příprava na STK pro Nový Bor, Českou Lípu a okolí.">
     <meta name="twitter:image" content="https://www.autoservisjanov.cz/assets/exterior.jpg">
     <script type="application/ld+json">
       {
@@ -84,8 +84,6 @@
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Digitální servisní knížka VW Group"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Zápis do servisní knihy"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Menší karosářské práce"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Geometrie kol"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Odtah vozů"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Prodej vozů"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dovoz vozů z Německa"}}
         ],
@@ -453,6 +451,8 @@
       }
 
       .service-strip {
+        max-width: 100%;
+        overflow: hidden;
         background: transparent;
       }
 
@@ -982,6 +982,24 @@
         align-items: start;
       }
 
+      #specializace .specialty-layout > div:first-child {
+        max-width: 360px;
+        padding-top: 6px;
+      }
+
+      #specializace .dark-band h2 {
+        max-width: 320px;
+        margin-bottom: 12px;
+        font-size: clamp(22px, 1.7vw, 28px);
+        line-height: 1.12;
+      }
+
+      #specializace .dark-band p {
+        max-width: 360px;
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
       .specialty-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1338,6 +1356,7 @@
 
       .contact-primary {
         display: grid;
+        grid-column: 1 / -1;
         gap: 16px;
       }
 
@@ -1413,6 +1432,8 @@
 
       .contact-preference h3 {
         margin-bottom: 10px;
+        font-size: clamp(42px, 5.4vw, 78px);
+        line-height: 1.02;
       }
 
       .contact-preference p {
@@ -1425,6 +1446,36 @@
         flex-wrap: wrap;
         gap: 12px;
         margin-top: 22px;
+      }
+
+      .technician-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .technician-call {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .technician-call:hover {
+        color: inherit;
+      }
+
+      .person-details .technician-phone {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--green);
+        font-weight: 780;
+      }
+
+      .person-details .technician-phone svg {
+        width: 16px;
+        height: 16px;
+        stroke-width: 2.4;
       }
 
       .contact-list {
@@ -1518,11 +1569,18 @@
       }
 
       .price-more {
+        display: grid;
+        gap: 10px;
         margin-top: 10px;
+      }
+
+      .price-more > .price-list {
+        order: 2;
       }
 
       .price-more summary {
         display: flex;
+        order: 1;
         align-items: center;
         justify-content: center;
         min-height: 48px;
@@ -1559,7 +1617,12 @@
       }
 
       .price-more[open] summary {
-        margin-bottom: 10px;
+        order: 2;
+        margin-top: 0;
+      }
+
+      .price-more[open] > .price-list {
+        order: 1;
       }
 
       .price-more[open] summary::after {
@@ -2580,6 +2643,14 @@
           font-size: 32px;
         }
 
+        #specializace .dark-band h2 {
+          font-size: 24px;
+        }
+
+        #specializace .dark-band p {
+          font-size: 14px;
+        }
+
         .specialty-layout {
           gap: 24px;
         }
@@ -2650,6 +2721,10 @@
           grid-template-columns: 1fr;
         }
 
+        .technician-grid {
+          grid-template-columns: 1fr;
+        }
+
         .person-card {
           grid-template-columns: 1fr;
         }
@@ -2685,9 +2760,9 @@
           </span>
         </a>
         <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Otevřít navigaci">
-        <a class="button button-call mobile-call" href="tel:+420777832015" aria-label="Domluvit termín telefonicky">
+        <a class="button button-call mobile-call" href="#kontakt" aria-label="Přejít na výběr kontaktu do servisu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg>
-          <span class="button-label mobile-call-text">Domluvit termín</span>
+          <span class="button-label mobile-call-text">Zavolat</span>
         </a>
         <label class="nav-menu-button" for="nav-toggle" role="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menu"><span></span></label>
         <div class="nav-right">
@@ -2699,9 +2774,9 @@
             <a href="#kontakt">Kontakt</a>
           </div>
           <div class="nav-cta">
-            <a class="button button-call" href="tel:+420777832015" aria-label="Domluvit termín telefonicky">
+            <a class="button button-call" href="#kontakt" aria-label="Přejít na výběr kontaktu do servisu">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg>
-              <span class="button-label">Domluvit termín</span>
+              <span class="button-label">Zavolat do servisu</span>
             </a>
           </div>
         </div>
@@ -2726,9 +2801,9 @@
             <span>Vozy všech běžných značek</span>
           </div>
           <div class="hero-actions">
-            <a class="button button-call" href="tel:+420777832015" aria-label="Domluvit termín telefonicky">
+            <a class="button button-call" href="#kontakt" aria-label="Přejít na výběr kontaktu do servisu">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg>
-              <span class="button-label">Domluvit termín</span>
+              <span class="button-label">Zavolat do servisu</span>
             </a>
           </div>
           <div class="facts">
@@ -2763,11 +2838,9 @@
                 <a class="chip" href="#sluzby">Brzdy</a>
                 <a class="chip" href="#sluzby">Oleje</a>
                 <a class="chip" href="priprava-na-stk/">Příprava na STK</a>
-                <a class="chip" href="geometrie-kol/">Geometrie</a>
                 <a class="chip" href="sluzby/#karoserie">Karosářské práce</a>
-                <a class="chip" href="sluzby/#odtah">Odtah vozů</a>
-                <a class="chip" href="sluzby/#odtah">Prodej vozů</a>
-                <a class="chip" href="sluzby/#odtah">Dovoz vozů z Německa</a>
+                <a class="chip" href="sluzby/#dovoz">Prodej vozů</a>
+                <a class="chip" href="sluzby/#dovoz">Dovoz vozů z Německa</a>
                 <a class="chip" href="sluzby/#servisni-knizka">Zápis do servisní knihy</a>
                 <a class="chip" href="#kontakt">Náhradní vůz</a>
               </div>
@@ -2779,11 +2852,9 @@
                 <a class="chip" href="#sluzby" tabindex="-1">Brzdy</a>
                 <a class="chip" href="#sluzby" tabindex="-1">Oleje</a>
                 <a class="chip" href="priprava-na-stk/" tabindex="-1">Příprava na STK</a>
-                <a class="chip" href="geometrie-kol/" tabindex="-1">Geometrie</a>
                 <a class="chip" href="sluzby/#karoserie" tabindex="-1">Karosářské práce</a>
-                <a class="chip" href="sluzby/#odtah" tabindex="-1">Odtah vozů</a>
-                <a class="chip" href="sluzby/#odtah" tabindex="-1">Prodej vozů</a>
-                <a class="chip" href="sluzby/#odtah" tabindex="-1">Dovoz vozů z Německa</a>
+                <a class="chip" href="sluzby/#dovoz" tabindex="-1">Prodej vozů</a>
+                <a class="chip" href="sluzby/#dovoz" tabindex="-1">Dovoz vozů z Německa</a>
                 <a class="chip" href="sluzby/#servisni-knizka" tabindex="-1">Zápis do servisní knihy</a>
                 <a class="chip" href="#kontakt" tabindex="-1">Náhradní vůz</a>
               </div>
@@ -2802,7 +2873,7 @@
             <div>
               <div class="service-title-row"><h3>Běžný servis a opravy</h3><span class="service-count">4 oblasti</span></div>
               <p>Pravidelný servis i opravy osobních a dodávkových vozů řešíme podle stavu auta, dostupnosti dílů a domluveného rozsahu práce.</p>
-              <div class="chip-list"><span class="chip">Mechanické opravy</span><span class="chip">Servisní prohlídky</span><span class="chip">Brzdy</span><span class="chip">Podvozky</span><span class="chip">Geometrie</span><span class="chip">Příprava na STK</span></div>
+              <div class="chip-list"><span class="chip">Mechanické opravy</span><span class="chip">Servisní prohlídky</span><span class="chip">Brzdy</span><span class="chip">Podvozky</span><span class="chip">Příprava na STK</span></div>
               <p class="service-extra"><strong>+ další:</strong> výměna oleje a filtrů, baterie, rozvody, oleje Castrol a servisní záznamy VW Group.</p>
             </div>
           </article>
@@ -2845,10 +2916,10 @@
           <article class="service-card">
             <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18l-2-6H5l-2 6Z"/><path d="M6 17a2 2 0 1 0 4 0"/><path d="M14 17a2 2 0 1 0 4 0"/><path d="M7 11l2-4h6l2 4"/><path d="M3 21h18"/><path d="M18 4h3v3"/></svg></div>
             <div>
-              <div class="service-title-row"><h3>Další služby po domluvě</h3><span class="service-count">4 služby</span></div>
-              <p>Geometrii, karosářské práce, odtah vozů, prodej vozů, dovoz vozů z Německa a náhradní vůz řešíme podle aktuálních možností.</p>
-              <div class="chip-list"><span class="chip">Geometrie kol</span><span class="chip">Karosářské práce</span><span class="chip">Odtah a dovoz</span><span class="chip">Náhradní vůz</span></div>
-              <p class="service-extra"><strong>+ další:</strong> prověření vozu, domluva přepravy a základní servis po dovozu.</p>
+              <div class="service-title-row"><h3>Další služby po domluvě</h3><span class="service-count">3 služby</span></div>
+              <p>Karosářské práce, prodej vozů, dovoz vozů z Německa a náhradní vůz řešíme podle aktuálních možností.</p>
+              <div class="chip-list"><span class="chip">Karosářské práce</span><span class="chip">Prodej vozů</span><span class="chip">Dovoz z Německa</span><span class="chip">Náhradní vůz</span></div>
+              <p class="service-extra"><strong>+ další:</strong> prověření vozu a základní servis po dovozu.</p>
             </div>
           </article>
         </div>
@@ -2957,7 +3028,7 @@
             <h2>Orientační ceník prací</h2>
             <p>Ceny jsou orientační. Finální cenu řekneme po kontrole vozu, podle rozsahu práce a použitých dílů.</p>
           </div>
-          <a class="button price-cta" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
+          <a class="button price-cta" href="#kontakt" aria-label="Přejít na výběr kontaktu do servisu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Zavolat do servisu</span></a>
         </div>
         <div class="price-list">
           <div class="price-row"><div><h3>Diagnostika závad</h3><p>Čtení chybových kódů, základní kontrola a doporučení dalšího postupu.</p></div><span class="price-status">Od ___ Kč</span></div>
@@ -2970,7 +3041,7 @@
               <div class="price-row"><div><h3>Servis klimatizace</h3><p>Kontrola, plnění, čištění a dezinfekce klimatizace podle potřeby.</p></div><span class="price-status">Od ___ Kč</span></div>
               <div class="price-row"><div><h3>Kontrola brzd</h3><p>Kontrola stavu destiček, kotoučů, brzdové kapaliny a doporučení opravy.</p></div><span class="price-status">Od ___ Kč</span></div>
               <div class="price-row"><div><h3>Příprava na STK</h3><p>Prohlídka základních částí vozu před technickou kontrolou.</p></div><span class="price-status">Od ___ Kč</span></div>
-              <div class="price-row"><div><h3>Odtah, prodej a dovoz vozů z Německa</h3><p>Odtah vozů, prodej vozů a dovoz vozů z Německa řešíme podle konkrétní domluvy.</p></div><span class="price-status">Dle domluvy</span></div>
+              <div class="price-row"><div><h3>Prodej a dovoz vozů z Německa</h3><p>Prodej vybraných vozů a dovoz vozů z Německa řešíme podle konkrétní domluvy.</p></div><span class="price-status">Dle domluvy</span></div>
               <div class="price-row"><div><h3>Běžná servisní práce</h3><p>Menší opravy a údržba účtovaná podle rozsahu práce a domluvy.</p></div><span class="price-status">Od ___ Kč</span></div>
             </div>
           </details>
@@ -3012,25 +3083,42 @@
 
       <section id="kontakt">
         <div class="contact-layout">
-          <aside class="contact-summary">
-            <h2>Domluva termínu</h2>
-            <div class="contact-list" data-nosnippet>
-              <div class="contact-item"><strong>Telefon:</strong> <a href="tel:+420777832015">+420&nbsp;777&nbsp;832&nbsp;015</a></div>
-              <div class="contact-item"><strong>Adresa servisu:</strong> <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></div>
-              <div class="contact-item"><strong>Provozní doba:</strong> <span>Pondělí-pátek 8:15-11:00 / 12:00-16:30</span><span>Sobota, neděle zavřeno</span></div>
-              <div class="contact-item"><strong>Termíny:</strong> <span>Termín nejlépe domluvíme telefonicky. Pokud jste poblíž, můžete se zastavit osobně v otevírací době.</span></div>
-              <div class="contact-item"><strong>Odpovědný vedoucí:</strong> <a href="tel:+420777832015">Martin Novák +420&nbsp;777&nbsp;832&nbsp;015</a></div>
-            </div>
-          </aside>
           <div class="contact-primary">
             <div class="contact-preference">
-              <h3>Preferujeme telefon nebo osobní domluvu</h3>
-              <p>Krátký hovor většinou stačí k domluvě termínu a prvního postupu. Pokud jste poblíž, zastavte se v otevírací době.</p>
-              <div class="contact-actions">
-                <a class="button button-call" href="tel:+420777832015" aria-label="Domluvit termín telefonicky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg><span>Domluvit termín</span></a>
-                <a class="button-outline" href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Ukázat adresu</a>
+              <h3>Objednat se do servisu</h3>
+              <p>Ozvěte se jednomu z našich techniků. Společně si upřesníte, co vůz potřebuje, kdy se můžete zastavit a jaký bude další postup.</p>
+              <div class="technician-grid" data-nosnippet>
+                <a class="person-card technician-call" href="tel:+420777832015" aria-label="Zavolat Martinovi Novákovi">
+                  <div class="person-photo" aria-label="Placeholder fotografie Martin Novák"><span>MN</span></div>
+                  <div class="person-body">
+                    <h3>Martin Novák</h3>
+                    <div class="person-role">termíny, příjem zakázek a první domluva</div>
+                    <p>Volejte kvůli objednání, převzetí vozu a orientační ceně prací.</p>
+                    <ul class="person-details">
+                      <li><span class="technician-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg>+420&nbsp;777&nbsp;832&nbsp;015</span></li>
+                    </ul>
+                  </div>
+                </a>
+                <a class="person-card technician-call" href="tel:+420737712217" aria-label="Zavolat Luďkovi Loosovi">
+                  <div class="person-photo" aria-label="Placeholder fotografie Luděk Loos"><span>LL</span></div>
+                  <div class="person-body">
+                    <h3>Luděk Loos</h3>
+                    <div class="person-role">technická domluva a průběh opravy</div>
+                    <p>Volejte kvůli technickému postupu, detailům opravy a komunikaci během servisu.</p>
+                    <ul class="person-details">
+                      <li><span class="technician-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92Z"/></svg>+420&nbsp;737&nbsp;712&nbsp;217</span></li>
+                    </ul>
+                  </div>
+                </a>
               </div>
             </div>
+            <aside class="contact-summary">
+              <h2>Informace k návštěvě</h2>
+              <div class="contact-list" data-nosnippet>
+                <div class="contact-item"><strong>Adresa servisu:</strong> <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></div>
+                <div class="contact-item"><strong>Provozní doba:</strong> <span>Pondělí-pátek 8:15-11:00 / 12:00-16:30</span><span>Sobota, neděle zavřeno</span></div>
+              </div>
+            </aside>
             <div class="contact-map">
               <iframe title="Mapa Autoservis Janov" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=50.740688,14.5810091&z=17&output=embed"></iframe>
               <div class="contact-map-caption">
@@ -3042,42 +3130,6 @@
         </div>
       </section>
 
-      <section class="people-section" id="lide">
-        <div class="section-head">
-          <div class="people-intro">
-            <h2>Kontaktní osoby</h2>
-            <p>Zakázky, termíny a technickou domluvu řeší Martin Novák a Luděk Loos.</p>
-          </div>
-        </div>
-        <div class="grid-2">
-          <article class="person-card">
-            <div class="person-photo" aria-label="Placeholder fotografie Martin Novák"><span>MN</span></div>
-            <div class="person-body">
-              <h3>Martin Novák</h3>
-              <div class="person-role">odpovědný vedoucí, příjem zakázek a termíny</div>
-              <p>Domluva termínu, převzetí vozu a orientační ceník prací.</p>
-              <ul class="person-details">
-                <li><strong>Telefon:</strong> <a href="tel:+420777832015">+420&nbsp;777&nbsp;832&nbsp;015</a></li>
-                <li><strong>IČO / DIČ:</strong> 67855237 / CZ7307232317</li>
-                <li><strong>Adresa:</strong> <a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></li>
-              </ul>
-            </div>
-          </article>
-          <article class="person-card">
-            <div class="person-photo" aria-label="Placeholder fotografie Luděk Loos"><span>LL</span></div>
-            <div class="person-body">
-              <h3>Luděk Loos</h3>
-              <div class="person-role">technická domluva</div>
-              <p>Technická domluva, servisní postup a komunikace během opravy.</p>
-              <ul class="person-details">
-                <li><strong>Telefon:</strong> <a href="tel:+420737712217">+420&nbsp;737&nbsp;712&nbsp;217</a></li>
-                <li><strong>IČO / DIČ:</strong> 29741947 / CZ29741947</li>
-                <li><strong>Adresa:</strong> <a href="https://maps.google.com/?q=Jir%C3%A1skova%20881%2C%20473%2001%20Nov%C3%BD%20Bor">Jiráskova 881, 473&nbsp;01 Nový Bor</a></li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
@@ -3098,12 +3150,10 @@
           <ul>
             <li><strong>Martin Novák</strong></li>
             <li><a href="tel:+420777832015">+420&nbsp;777&nbsp;832&nbsp;015</a></li>
-            <li>IČO: 67855237 / DIČ: CZ7307232317</li>
-            <li><a href="https://maps.app.goo.gl/hzoNh6EBdeUgtRS58">Janov 166, 473&nbsp;01 Nový Bor</a></li>
+            <li>IČO: 67855237</li>
             <li><strong>Luděk Loos</strong></li>
             <li><a href="tel:+420737712217">+420&nbsp;737&nbsp;712&nbsp;217</a></li>
-            <li>IČO: 29741947 / DIČ: CZ29741947</li>
-            <li><a href="https://maps.google.com/?q=Jir%C3%A1skova%20881%2C%20473%2001%20Nov%C3%BD%20Bor">Jiráskova 881, 473&nbsp;01 Nový Bor</a></li>
+            <li>IČO: 29741947</li>
             <li><a href="mailto:info@autoservisjanov.cz">info@autoservisjanov.cz</a></li>
           </ul>
         </div>
@@ -3114,8 +3164,7 @@
             <li><strong>8:15-11:00 / 12:00-16:30</strong></li>
             <li>Sobota, neděle</li>
             <li><strong>Zavřeno</strong></li>
-            <li>Termín nejlépe domluvíme telefonicky. Pokud jste poblíž, můžete se zastavit osobně v otevírací době.</li>
-            <li class="footer-manager"><span class="footer-manager-label">Odpovědný vedoucí:</span> <a href="tel:+420777832015"><span class="footer-manager-name">Martin&nbsp;Novák</span> +420&nbsp;777&nbsp;832&nbsp;015</a></li>
+            <li>Termín nejlépe domluvíte telefonicky s vybraným technikem. Pokud jste poblíž, můžete se zastavit osobně v otevírací době.</li>
           </ul>
         </div>
         <div>
